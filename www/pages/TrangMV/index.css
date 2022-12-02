@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital@0;1&family=Poppins:ital,wght@0,400;1,300;1,400&display=swap");
+
+/* ---------------------- gallery --------------------------- */
+.gallery {
+  padding-top: 60px;
+  background: url("https://preview.colorlib.com/theme/hnband/img/video-overlay.png.webp");
+}
+.gallery__heading-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery__heading-title h4 {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 50px;
+  color: #e934ff;
+}
+.gallery__heading-title button {
+  background: linear-gradient(to right top, #613ad0, #cf35f6);
+  height: 50px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.gallery__heading-title button:hover {
+  opacity: 0.8;
+}
+.gallery__heading-title button i {
+  margin-right: 4px;
+}
+.gallery__heading-desc {
+  font-family: "Lato", sans-serif;
+  font-size: 50px;
+}
+.gallery__body .card {
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-top: 20px;
+  text-align: center;
+}
+.gallery__body .card img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  padding: 10px;
+  transform: scale(1);
+  transition: all linear 0.2s;
+}
+.gallery__body .card img:hover {
+  transform: scale(1.05);
+}
+.gallery__body .card .songname {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+.gallery__body .card .singlename {
+  font-size: 20px;
+  margin-top: 4px;
+  font-style: italic;
+  color: #ccc;
+}
+
+/* ---------------------- listsong --------------------------- */
+.listsong {
+  background: #0f0923;
+  text-align: center;
+}
+.listsong .wrap-thumbnail {
+  padding: 0;
+  position: relative;
+}
+.listsong .thumbnail img {
+  width: 100%;
+  object-fit: cover;
+}
+.listsong-title {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 30px;
+  color: #e934ff;
+  margin: 0;
+  margin-top: 40px;
+}
+.listsong-desc {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 10px;
+}
+.listsong .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px #262037 solid;
+}
+.listsong .item:hover {
+  background: #262037;
+}
+.listsong .item-left {
+  display: flex;
+  align-items: center;
+}
+.listsong .control-btn {
+  margin-right: 30px;
+}
+.listsong .control-btn i {
+  border-radius: 50%;
+  font-size: 40px;
+  cursor: pointer;
+  background: #3b2d81;
+  color: #fff;
+  opacity: 0.5;
+}
+.listsong .song-info {
+  text-align: start;
+  width: 200px;
+  white-space: nowrap;
+}
+.listsong .control-btn i:hover {
+  opacity: 1;
+}
+.listsong .item-right .timer {
+  margin: 0;
+}
+.listsong .song-name {
+  font-size: 20px;
+}
+.listsong .singer-name {
+  font-size: 14px;
+  color: #98959d;
+}
+
+/* control song */
+.audio__form {
+  position: relative;
+  top: -100px;
+  padding: 0 30px;
+}
+.audio__form .song-info {
+  display: inline-block;
+}
+.audio__form .audio__form-control {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.audio__form .audio__form-control i {
+  font-size: 30px;
+  margin: 4px;
+}
+.audio__form .audio__form-control i:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.audio__form .audio__form-control i:nth-child(2)::before {
+  color: #e934ff;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  font-size: 40px;
+}
+.audio__form-process {
+  width: 100%;
+}
+
+/* ----------------- UpcomingShows -------------------- */
+.wrap {
+  background: url("https://preview.colorlib.com/theme/hnband/img/video-overlay.png.webp");
+}
+.UpcomingShows .UpcomingShows__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.UpcomingShows .UpcomingShows__heading h2 {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 50px;
+  color: #e934ff;
+  margin: 0;
+}
+.UpcomingShows .UpcomingShows__heading button {
+  color: #fff;
+  background: linear-gradient(to top right, #563acc, #e234fc);
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  padding: 10px 30px;
+}
+.UpcomingShows__decs {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* UpcomingShows__list */
+.UpcomingShows__list .row {
+  background: transparent;
+  padding: 20px;
+  align-items: center;
+  border-bottom: 1px #262037 solid;
+  transition: all 0.2s linear;
+}
+.UpcomingShows__list .row:hover {
+  background: #231d2d;
+}
+.UpcomingShows__list-date .day {
+  color: #e934ff;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 0;
+}
+.UpcomingShows__list-date .month {
+  font-size: 14px;
+  color: #ccc;
+}
+.UpcomingShows__list-info .title {
+  font-size: 25px;
+  color: #fff;
+}
+.UpcomingShows__list-info .desc {
+  font-size: 14px;
+  color: #ccc;
+}
+.UpcomingShows__list-location {
+  display: flex;
+}
+.UpcomingShows__list-location .icon {
+  margin-right: 8px;
+}
+.UpcomingShows__list-time {
+  display: flex;
+}
+.UpcomingShows__list-time .icon {
+  margin-right: 8px;
+}
+.UpcomingShows__price-btn {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #6c39d3, darkorchid) 1;
+  padding: 6px 20px;
+  font-size: 18px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+}
+.UpcomingShows__price-btn:hover {
+  background-image: linear-gradient(to right, #6c39d3, darkorchid);
+}
+
+/* ---------------------- contact ------------------ */
+.contact {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.contact__form {
+  background: #191039;
+  flex: 1;
+  padding: 50px 60px;
+}
+.contact__form-title {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 50px;
+  color: #e934ff;
+  margin: 0;
+}
+.contact__form-decs {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  resize: none;
+  padding: 10px 20px;
+  padding-left: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px #474061 solid;
+  color: #ccc;
+}
+.contact__form textarea {
+  margin-top: 20px;
+  height: 100px;
+}
+.contact__form button {
+  padding: 10px 30px;
+  margin-top: 30px;
+  background-image: linear-gradient(to right top, #6839d2, #ca35f4);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+.contact__form button:hover {
+  opacity: 0.8;
+}
+
+/* -------------------footer ------------------------ */
+.footer {
+  margin-top: 30px;
+  padding: 40px;
+}
+.footer .col-4 {
+  display: flex;
+}
+.footer .col-4 .icon {
+  font-size: 20px;
+  background-image: linear-gradient(to right top, #6539d1, #db34f9);
+  width: 50px;
+  height: 50px;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+.footer__info-contact p,
+.footer__info-location P {
+  font-size: 15px;
+  margin: 0;
+  color: #ccc;
+}
+
+.footer__contact-nav {
+  color: white;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+}
+.footer__contact-nav::before {
+  z-index: -1;
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  background: linear-gradient(45deg, #7239D6, #C035F0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.footer__contact-nav i:hover {
+  cursor: pointer;
+  color : #AF36EB;
+}

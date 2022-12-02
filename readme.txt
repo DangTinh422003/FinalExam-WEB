@@ -1,1 +1,0 @@
-Mấy bạn sử file index.html với base.css làm khung nha. Viết các trang thì tạo folder con trong folder Pages
