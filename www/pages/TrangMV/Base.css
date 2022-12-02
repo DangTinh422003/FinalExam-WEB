@@ -65,6 +65,18 @@ body {
   left: 0;
   background: #9b4de0;
 }
+.sidebar__nav li.active {
+  background: #393243;
+}
+.sidebar__nav li.active::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #9b4de0;
+}
 .sidebar__nav a {
   color: #dadada;
   opacity: 0.9;

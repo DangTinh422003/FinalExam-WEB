@@ -79,7 +79,10 @@
   padding: 0;
   position: relative;
 }
+.listsong .thumbnail {}
+
 .listsong .thumbnail img {
+  height: 633px;
   width: 100%;
   object-fit: cover;
 }
