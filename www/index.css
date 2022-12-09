@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital@0;1&family=Poppins:ital,wght@0,400;1,300;1,400&display=swap');
+
 /* ----------------------------- carousel --------------------------------------  */
 .carousel {
   position: relative;
+  margin-top: 10px;
+  margin-bottom: 70px;
 }
 .carousel__item {
   border-radius: 12px;
@@ -12,15 +16,25 @@
 }
 .carousel__control {
   position: absolute;
-  top: 75%;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%,-50%);
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 25px;
+  width: 88%;
+  padding: 0 15px;
+  margin-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+.carousel:hover .carousel__control{
+  opacity: 1;
+  visibility: visible;
 }
 .carousel__control button {
-  color: rgb(161, 158, 158);
-  background: #ccc;
+  color: #1B0F2C;
+  background: #fff;
   border: none;
   outline: none;
   width: 40px;
@@ -32,10 +46,16 @@
   justify-content: center;
   cursor: pointer;
 }
+.carousel__control button:hover {
+  color : #fff;
+  background: #392258;
+  outline: 2px solid #fff;
+}
+
 
 /* ----------------------- justHeard --------------------------- */
 .justHeard {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 .justHeard__heading {
   display: flex;
@@ -60,7 +80,7 @@
   margin-left: 10px;
 }
 .justHeard .card {
-  margin-top: 10px;
+  margin-top: 20px;
   border: none;
   border-radius: 4px;
   overflow: hidden;
@@ -83,7 +103,7 @@
 
 /* -------------- listSong ------------------- */
 .listSong {
-  margin-top: 80px;
+  margin-top: 20px;
 }
 .listSong__heading {
   font-size: 40px;
@@ -173,7 +193,7 @@
 
 /* ------------------------ Album --------------- */
 .album {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .album__heading {
   font-size: 40px;
@@ -186,11 +206,20 @@
 .album__list .card {
   border: none;
   outline: none;
-  background: #231b2e;
-  overflow: hidden;
+  background: transparent;
   padding: 10px;
+  text-align: center;
+}
+.album__list .card-img {
+  background: #2f2739;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .album__list .card img {
+  width: 100%;
   transform: scale(1);
   transition: all 0.2s linear;
 }
@@ -198,45 +227,104 @@
   transform: scale(1.1);
 }
 .album__list .card__body {
-  padding: 20px 20px 0 20px;
+  padding: 10px 0;
   position: relative;
 }
 .album__list .album-name {
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
 }
 .album__list .album-desc {
   font-size: 18px;
   color: #ccc;
   font-style: italic;
+  white-space: nowrap;
 }
 .album__list .card__body a {
-  display: flex;
-  justify-content: end;
-  padding: 6px;
   color: rgb(161, 158, 158);
 }
 .album__list .card__body a:hover {
   color: #bc6fe6;
 }
 
-/* ------------------------- rating -------------------------- */
-.rating {
-  margin-top: 50px;
+
+
+/* -----------------Bảng xếp hạng ---------------*/
+.charts {
+  margin-top: 20px;
+  background: #ccc;
+  background: url('https://bom.so/PLK7Zn');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 70px;
 }
-.rating__heading {
+.charts p {
+  margin : 0;
+}
+.charts__heading {
   font-size: 40px;
+  font-family: 'Lato', sans-serif;
   font-weight: bold;
-  background: -webkit-linear-gradient(#fdfce7, #a7c5cf);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  padding: 40px 0 20px 0;
 }
-.apexcharts-toolbar {
-  display: none!important;
+.charts__subheading {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
-line {
-  display: none!important;
+.charts__subheading-title {
+  margin-right: 10px;
 }
-tspan {
-  display: none!important;
+.charts__subheading i::before {
+  font-size: 30px;
+  color: #9B4DE0;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
 }
+.charts__tablelist {
+  background: rgba(44, 33, 62,0.8);
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.charts__tablelist .timer {
+  position: absolute;
+  right: 30px;
+}
+.charts__tablelist_rankNum {
+  font-size: 38px;
+  font-weight: bold;
+  -webkit-text-stroke: 2px #C0BDC6;
+  color : transparent;
+  width: 40px;
+}
+.charts__tablelist li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 24px;
+  height: 80px;
+}
+.charts__tablelist li:hover {
+  background: rgba(57, 50, 67,0.3);
+}
+.charts__tablelist__wrapSongInfo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.charts__tablelist__wrapSongInfo .singer-name {
+  color : rgb(154, 151, 151);
+}
+.charts__tablelist__wrapSongInfo img{
+  height: 100%;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+
+

@@ -73,7 +73,7 @@ function handleNextSong() {
     $(".audio__form .singer-name").text(DATA[currentSongID].singer);
     $(".audio__form span:nth-child(2)").text(DATA[currentSongID].timer);
     $(".audio__form audio").attr("id", `songId_${currentSongID}`);
-    $('.thumbnail img').attr('src', DATA[currentSongID].img)
+    $('.listsong .thumbnail img').attr('src', DATA[currentSongID].img)
     changIconOnListSong(currentSongID);
 
     play_pauseSong(currentSongID, "play");
@@ -93,7 +93,7 @@ function handlePrevSong() {
     $(".audio__form .singer-name").text(DATA[currentSongID].singer);
     $(".audio__form span:nth-child(2)").text(DATA[currentSongID].timer);
     $(".audio__form audio").attr("id", `songId_${currentSongID}`);
-    $('.thumbnail img').attr('src', DATA[currentSongID].img)
+    $('.listsong .thumbnail img').attr('src', DATA[currentSongID].img)
     changIconOnListSong(currentSongID);
 
     play_pauseSong(currentSongID, "play");

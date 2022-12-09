@@ -1,7 +1,5 @@
 <?php
-
 	#  https://www.w3schools.com/php/php_mysql_select.asp
-
     $host = 'mysql-server'; // tên mysql server
     $user = 'root';
     $pass = 'root';
@@ -12,9 +10,7 @@
     if ($conn->connect_error) {
         die('Không thể kết nối database: ' . $conn->connect_error);
     }
-
 	echo "Kết nối thành công tới database<br><br>";
-
 	$sql = "SELECT * from product";
 	$result = $conn->query($sql);
 
