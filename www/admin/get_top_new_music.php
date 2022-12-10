@@ -6,10 +6,14 @@
  */
 
 require 'connect.php';
-$num_of_music = $_REQUEST['num_of_musics'];
+// $num_of_music = $_REQUEST['num_of_musics'];
 $num_of_music = 10;
 
-$stmt = $db->prepare("SELECT * FROM music ORDER BY ngay_phat_hanh LIMIT ?;");
+$stmt = $db->prepare(
+    "SELECT music.*, tac_gia.ten_tac_gia
+    FROM `music` JOIN `tac_gia` ON music.id_tac_gia = tac_gia.id
+    ORDER BY ngay_phat_hanh LIMIT ?;"
+);
 $stmt->bind_param("i", $num_of_music);
 $stmt->execute();
 $music = array();

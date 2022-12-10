@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Comfpatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWMlMjBsb2dvfGVufDB8fDB8fA%3D%3D&w=1000&q=80" />
+    <link
+      rel="icon"
+      href="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWMlMjBsb2dvfGVufDB8fDB8fA%3D%3D&w=1000&q=80" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link
       rel="stylesheet"
@@ -20,164 +22,243 @@
     <div class="root">
       <div class="row no-gutters">
         <!-- ----------------------------sidebar----------------------- -->
-        <div class="col-2 ">
-          <div class="sidebar">
-            <!-- logo -->
-            <div class="sidebar__logo">
-              <a href="./index.html"
-                ><img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt="logo"
-              /></a>
-            </div>
-            <!-- nav -->
-            <ul class="sidebar__nav">
-              <li>
-                <a href="../TrangCaNhan/index.html">
-                  <i class="sidebar__icon fa-solid fa-list-ul"></i>
-                  <span>Cá Nhân</span>
-                </a>
-              </li>
-              <li>
-                <a href="../../index.html">
-                  <i class="sidebar__icon fa-solid fa-headphones-simple"></i>
-                  <span>khám Phá</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <i class="sidebar__icon fa-solid fa-chart-line"></i>
-                  <span>#zingchart</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <i class="sidebar__icon fa-solid fa-radio"></i>
-                  <span>Radio</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <i class="sidebar__icon fa-regular fa-rectangle-list"></i>
-                  <span>Theo Dõi</span>
-                </a>
-              </li>
-              <li class="underline"></li>
-              <li>
-                <a href="">
-                  <i class="sidebar__icon fa-solid fa-music"></i>
-                  <span>Nhạc Mới</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <i class="sidebar__icon fa-brands fa-squarespace"></i>
-                  <span>Thể Loại</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <i class="sidebar__icon fa-regular fa-star"></i>
-                  <span>Top 100</span>
-                </a>
-              </li>
-              <li class="active">
-                <a href="">
-                  <i class="sidebar__icon fa-solid fa-clapperboard"></i>
-                  <span>MV</span>
-                </a>
-              </li>
-            </ul>
+        <div class="sidebar">
+          <!-- logo -->
+          <div class="sidebar__logo">
+            <a href="./index.html">
+              <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt="logo" />
+              <img
+                src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.8.1/static/media/icon_zing_mp3_60.f6b51045.svg"
+                class="d-none"
+                alt="logo" />
+            </a>
           </div>
+          <!-- nav -->
+          <ul class="sidebar__nav">
+            <li>
+              <a href="../TrangCaNhan/index.html">
+                <i class="sidebar__icon fa-solid fa-list-ul"></i>
+                <span>Cá Nhân</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../index.html">
+                <i class="sidebar__icon fa-solid fa-headphones-simple"></i>
+                <span>khám Phá</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-solid fa-chart-line"></i>
+                <span>#zingchart</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-solid fa-radio"></i>
+                <span>Radio</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-regular fa-rectangle-list"></i>
+                <span>Theo Dõi</span>
+              </a>
+            </li>
+            <li class="underline"></li>
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-solid fa-music"></i>
+                <span>Nhạc Mới</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-brands fa-squarespace"></i>
+                <span>Thể Loại</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-regular fa-star"></i>
+                <span>Top 100</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="">
+                <i class="sidebar__icon fa-solid fa-clapperboard"></i>
+                <span>MV</span>
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <div class="col-10">
-          <!----------------------------- content--------------------------- -->
+        <!----------------------------- content--------------------------- -->
+        <div class="main">
           <div class="content">
+            
+            <!-- ratingchart -->
+            <div class="ratingchart">
+              <div class="container">
+                <!-- background -->
+                <div class="ratingchart__background-blur"></div>
+                <div class="ratingchart__background-alpha"></div>
+                <!-- header -->
+                <div class="ratingchart__header">
+                  <h2 class="ratingchart__header-title">Bảng Xếp Hạng Trong Tuần</h2>
+                  <div class="ratingchart__header-icon"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <!-- body -->
+                <div class="ratingChart__body">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="ratingChart__item">
+                        <p class="ratingChart-rank">1</p>
+                        <div class="ratingChart__item-img">
+                          <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/2/0/3/f/203f50940ab726d125ea73d5c1baac94.jpg" alt="">
+                        </div>
+                        <div class="ratingChart__songInfo">
+                          <p class="ratingChart__songname">Đừng lo nhé! Có Anh Đây</p>
+                          <p class="ratingChart__singer">Thành Đạt</p>
+                        </div>
+                        <p class="ratingChart__view">47%</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="ratingChart__item">
+                        <p class="ratingChart-rank">1</p>
+                        <div class="ratingChart__item-img">
+                          <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/a/6/5/5/a65573e6905dc4f29f59c49ea04866cf.jpg" alt="">
+                        </div>
+                        <div class="ratingChart__songInfo">
+                          <p class="ratingChart__songname">Đừng lo nhé! Có Anh Đây</p>
+                          <p class="ratingChart__singer">Thành Đạt</p>
+                        </div>
+                        <p class="ratingChart__view">47%</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="ratingChart__item">
+                        <p class="ratingChart-rank">1</p>
+                        <div class="ratingChart__item-img">
+                          <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/3/6/6/c/366c187df4fe8d462ba0c48ff0f062f9.jpg" alt="">
+                        </div>
+                        <div class="ratingChart__songInfo">
+                          <p class="ratingChart__songname">Đừng lo nhé! Có Anh Đây</p>
+                          <p class="ratingChart__singer">Thành Đạt</p>
+                        </div>
+                        <p class="ratingChart__view">47%</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="ratingChart__item">
+                        <p class="ratingChart-rank">1</p>
+                        <div class="ratingChart__item-img">
+                          <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/3/6/6/c/366c187df4fe8d462ba0c48ff0f062f9.jpg" alt="">
+                        </div>
+                        <div class="ratingChart__songInfo">
+                          <p class="ratingChart__songname">Đừng lo nhé! Có Anh Đây</p>
+                          <p class="ratingChart__singer">Thành Đạt</p>
+                        </div>
+                        <p class="ratingChart__view">47%</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="ratingChart__item">
+                        <p class="ratingChart-rank">1</p>
+                        <div class="ratingChart__item-img">
+                          <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/3/6/6/c/366c187df4fe8d462ba0c48ff0f062f9.jpg" alt="">
+                        </div>
+                        <div class="ratingChart__songInfo">
+                          <p class="ratingChart__songname">Đừng lo nhé! Có Anh Đây</p>
+                          <p class="ratingChart__singer">Thành Đạt</p>
+                        </div>
+                        <p class="ratingChart__view">47%</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="ratingChart__item">
+                        <p class="ratingChart-rank">1</p>
+                        <div class="ratingChart__item-img">
+                          <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/3/6/6/c/366c187df4fe8d462ba0c48ff0f062f9.jpg" alt="">
+                        </div>
+                        <div class="ratingChart__songInfo">
+                          <p class="ratingChart__songname">Đừng lo nhé! Có Anh Đây</p>
+                          <p class="ratingChart__singer">Thành Đạt</p>
+                        </div>
+                        <p class="ratingChart__view">47%</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="ratingChart__item">
+                        <p class="ratingChart-rank">1</p>
+                        <div class="ratingChart__item-img">
+                          <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/3/6/6/c/366c187df4fe8d462ba0c48ff0f062f9.jpg" alt="">
+                        </div>
+                        <div class="ratingChart__songInfo">
+                          <p class="ratingChart__songname">Đừng lo nhé! Có Anh Đây</p>
+                          <p class="ratingChart__singer">Thành Đạt</p>
+                        </div>
+                        <p class="ratingChart__view">47%</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="ratingChart__item">
+                        <p class="ratingChart-rank">1</p>
+                        <div class="ratingChart__item-img">
+                          <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/3/6/6/c/366c187df4fe8d462ba0c48ff0f062f9.jpg" alt="">
+                        </div>
+                        <div class="ratingChart__songInfo">
+                          <p class="ratingChart__songname">Đừng lo nhé! Có Anh Đây</p>
+                          <p class="ratingChart__singer">Thành Đạt</p>
+                        </div>
+                        <p class="ratingChart__view">47%</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="ratingChart__item">
+                        <p class="ratingChart-rank">1</p>
+                        <div class="ratingChart__item-img">
+                          <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/3/6/6/c/366c187df4fe8d462ba0c48ff0f062f9.jpg" alt="">
+                        </div>
+                        <div class="ratingChart__songInfo">
+                          <p class="ratingChart__songname">Đừng lo nhé! Có Anh Đây</p>
+                          <p class="ratingChart__singer">Thành Đạt</p>
+                        </div>
+                        <p class="ratingChart__view">47%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- gallery -->
             <div class="gallery">
               <div class="container">
-                <div class="gallery__heading">
-                  <div class="gallery__heading-title">
-                    <h4>Our Discogaphy</h4>
-                    <button type="button" class="buyTicket-btn" aria-label="buy ticket">
-                      <i class="fa-brands fa-apple"></i>
-                      <span>BUY ON ITUNES</span>
-                    </button>
+                <div class="row">
+                  <div class="col-lg-4 col-6">
+                    <div class="gallery__item">
+                      <img
+                        src="https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/song-vn-2x.jpg"
+                        alt=""
+                        class="gallery__item-img" />
+                    </div>
                   </div>
-                  <p class="gallery__heading-desc">NEWEST ALBUMS & SINGLES.</p>
-                </div>
-                <div class="gallery__body">
-                  <div class="row">
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="./image/1.jpg" alt="" />
-                        <div class="card-body">
-                          <h3 class="songname">Waiting For Love</h3>
-                          <h4 class="singlename">Avicii</h4>
-                        </div>
-                      </div>
+                  <div class="col-lg-4 col-6">
+                    <div class="gallery__item">
+                      <img
+                        src="https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/web_song_usuk.jpg"
+                        alt=""
+                        class="gallery__item-img" />
                     </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="./image/2.jpg" alt="" />
-                        <div class="card-body">
-                          <h3 class="songname">Waiting For Love</h3>
-                          <h4 class="singlename">Avicii</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="./image/3.jpg" alt="" />
-                        <div class="card-body">
-                          <h3 class="songname">Waiting For Love</h3>
-                          <h4 class="singlename">Avicii</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="./image/4.jpg" alt="" />
-                        <div class="card-body">
-                          <h3 class="songname">Waiting For Love</h3>
-                          <h4 class="singlename">Avicii</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="./image/5.jpg" alt="" />
-                        <div class="card-body">
-                          <h3 class="songname">Waiting For Love</h3>
-                          <h4 class="singlename">Avicii</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="./image/6.jpg" alt="" />
-                        <div class="card-body">
-                          <h3 class="songname">Waiting For Love</h3>
-                          <h4 class="singlename">Avicii</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="./image/7.jpg" alt="" />
-                        <div class="card-body">
-                          <h3 class="songname">Waiting For Love</h3>
-                          <h4 class="singlename">Avicii</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="card">
-                        <img src="./image/8.jpg" alt="" />
-                        <div class="card-body">
-                          <h3 class="songname">Waiting For Love</h3>
-                          <h4 class="singlename">Avicii</h4>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="col-lg-4 d-lg-block d-none">
+                    <div class="gallery__item">
+                      <img
+                        src="https://zmp3-static.zmdcdn.me/skins/zmp3-v5.2/images/web_song_kpop.jpg"
+                        alt=""
+                        class="gallery__item-img" />
                     </div>
                   </div>
                 </div>
@@ -202,7 +283,9 @@
                           <div class="song-info">
                             <h3 class="song-name">Ai cũng có ngày xưa</h3>
                             <h4 class="singer-name">Phan Mạnh Quỳnh</h4>
-                            <audio id="songId_0" src="./music/y2meta.com - Ai Cũng Có Ngày Xưa - Phan Mạnh Quỳnh _ AUDIO LYRIC HD (192 kbps).mp3"></audio>
+                            <audio
+                              id="songId_0"
+                              src="./music/y2meta.com - Ai Cũng Có Ngày Xưa - Phan Mạnh Quỳnh _ AUDIO LYRIC HD (192 kbps).mp3"></audio>
                           </div>
                           <div class="audio__main-control">
                             <i class="fa-solid fa-backward-step"></i>
@@ -210,11 +293,18 @@
                             <i class="fa-solid fa-forward-step"></i>
                           </div>
                           <div class="timer">
-                            <span>00:00</span> | 
+                            <span>00:00</span> |
                             <span>00:54</span>
                           </div>
                         </div>
-                        <input type="range" class="audio__form-process" aria-label="processbar"min="0"max="100" value="0"step="0.01" />
+                        <input
+                          type="range"
+                          class="audio__form-process"
+                          aria-label="processbar"
+                          min="0"
+                          max="100"
+                          value="0"
+                          step="0.01" />
                       </div>
                     </div>
                     <!-- end control -->

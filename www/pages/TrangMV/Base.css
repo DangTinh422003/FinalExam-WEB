@@ -19,6 +19,31 @@ body {
 
 
 /* ------------ sidebar ----------- */
+
+.main {
+  margin-left: 252px;
+  width: calc(100% - 252px);
+}
+@media screen and (max-width: 1279.98px) {
+  .sidebar {
+    width: 80px;
+  }
+  .sidebar li span {
+    display: none !important;
+  }
+  .sidebar img:nth-child(1) {
+    display: none;
+  }
+  .sidebar img:nth-child(2) {
+    display: block !important;
+  }
+  .main {
+    margin-left: 80px;
+    width: 100%;
+  }
+}
+
+/* ------------ sidebar ----------- */
 .sidebar {
   position: fixed;
   background: #231b2e;
@@ -48,11 +73,11 @@ body {
   width: 80%;
   height: 2px;
   background: #ccc;
-  margin : 20px 0;
+  margin: 20px 0;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-} 
+}
 .sidebar__nav li:hover {
   background: #393243;
 }

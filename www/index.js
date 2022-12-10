@@ -50,19 +50,19 @@ function renderJustHead() {
   );
 }
 async function renderListSong() {
-  let data 
+  let data;
   await fetch("http://localhost:8080/admin/load_full_music.php")
     .then((res) => res.json())
     .then((res) => {
-      data = res.data
+      data = res.data;
     });
   // render
   if (data) {
-    console.log(data)
     const listSong = $(".listSong__list-item .row");
     listSong.html(
-      data.map((item) => {
-        return `
+      data
+        .map((item) => {
+          return `
           <div class="col-lg-4 col-md-6 col-12">
           <div class="item">
             <img
@@ -70,7 +70,7 @@ async function renderListSong() {
               alt="" />
             <div class="body-item">
               <h4 class="songname">${item.ten_bai_hat}</h4>
-              <a class="singlename">${item.singer}</a>
+              <a class="singlename">${item.ten_tac_gia}</a>
               <p class="datetime">${item.ngay_phat_hanh}</p>
             </div>
             <!-- play btn -->
@@ -80,8 +80,9 @@ async function renderListSong() {
           </div>
         </div>
       `;
-      }).join('')
-    )
+        })
+        .join("")
+    );
   }
 }
 function handleCarousel() {
@@ -108,19 +109,171 @@ function handleCarousel() {
     renderCarousel();
   });
 }
-function renderAlbum() {
-  const data = [
-    {
-      img: 'https://bom.so/gJ9DXe',
-      
+function handleCickOnListSong() {
+  const listSong = $(".listSong__list-item .play-btn");
+  $("body").on("click", ".listSong__list-item .play-btn", async function (e) {
+    currentSongId = +this.dataset.songid;
+    if (this.querySelector("i").classList.contains("fa-play")) {
+      await callApiChangeInfo(currentSongId);
+      [...$(".listSong_list-item i")].forEach((item) => {
+        item.classList.replace("fa-pause", "fa-play");
+      });
+      this.querySelector("i").classList.replace("fa-play", "fa-pause");
+      // if ($("footer .play-btn")[0].classList.contains('fa-play')) {
+      $("footer .play-btn")[0].classList.replace("fa-play", "fa-pause");
+      // }
+      $("footer audio")[0].play();
+    } else {
+      this.querySelector("i").classList.replace("fa-pause", "fa-play");
+      // if ($("footer .play-btn")[0].classList.contains('fa-pause')) {
+      $("footer .play-btn")[0].classList.replace("fa-pause", "fa-play");
+      // }
+      $("footer audio")[0].pause();
     }
-  ]
-
+  });
 }
-// -----------------------------------------------------------------------------------------------------
-function handleFooter(songid) {
-  $('.footer .songControl-menu i.play-btn').on('click',(e) => {
-    e.target.classList.toggle('fa-play')
-    e.target.classList.toggle('fa-pause')
-  })
+// --------------- just footer  -----------------------------------------------------------------------------
+function handleAudioLoading() {
+  // update process
+  $("footer audio").on("timeupdate", async function (e) {
+    const audio = $("footer .songControl-menu audio");
+    const processTime = (this.currentTime / this.duration) * 100;
+    const processLine = $(".songControl-processbar-line").css("width", `${processTime}%`);
+    let timeStart = "00:00";
+    if (this.currentTime < 60) {
+      this.currentTime < 10
+        ? (timeStart = `00:0${Math.floor(this.currentTime)}`)
+        : (timeStart = `00:${Math.floor(this.currentTime)}`);
+    } else {
+      let minute = Math.floor(this.currentTime / 60);
+      let second = Math.floor(this.currentTime % 60);
+      minute < 10 ? (timeStart = `0${minute}:`) : (timeStart = `${minute}:`);
+      second < 10 ? (timeStart += `0${second}`) : (timeStart += `${second}`);
+    }
+    $("footer .time-start").text(timeStart);
+    // end song
+    if (this.duration === this.currentTime) {
+      processLine.css("width", "0%");
+      $("footer .time-start").text("00:00");
+      if (currentSongId == 15) {
+        currentSongId = 1;
+      } else {
+        currentSongId++;
+      }
+      await callApiChangeInfo(currentSongId);
+      await $("footer audio")[0].play();
+    }
+  });
+}
+async function callApiChangeInfo(songid) {
+  let data;
+  await fetch(`http://localhost:8080/admin/get_music_by_id.php?id=${songid}`)
+    .then((res) => res.json())
+    .then((res) => {
+      data = res.data;
+    });
+  // change info
+  await $("footer audio").attr("src", `http://localhost:8080/music/${data.path_nhac}`);
+  await $("footer audio").attr("data-songid", data.id);
+  await $("footer .songInfo-img img").attr("src", `http://localhost:8080/image/${data.path_anh}`);
+  await $("footer .songInfo-detail .songname").text(data.ten_bai_hat);
+  await $("footer .songInfo-detail .singer-name").text(data.ten_tac_gia);
+}
+function handleMenuSong() {
+  // change heart icon when click
+  const heartBtn = $(".songInfo-more .heart");
+  heartBtn.on("click", function (e) {
+    e.target.classList.toggle("active");
+  });
+
+  // next song
+  const nextBtn = $(".songControl-menu .next-btn");
+  nextBtn.on("click", async function (e) {
+    if (currentSongId < countSong) {
+      currentSongId++;
+    } else {
+      currentSongId = 1;
+    }
+    await callApiChangeInfo(currentSongId);
+    const playBtn = $(".songControl-menu .play-btn");
+    await playBtn[0].classList.replace("fa-play", "fa-pause");
+    await $("footer audio")[0].play();
+  });
+  // prev song
+  const prevBtn = $(".songControl-menu .prev-btn");
+  prevBtn.on("click", async function (e) {
+    if (currentSongId > 1) {
+      currentSongId--;
+    } else {
+      currentSongId = countSong;
+    }
+    await callApiChangeInfo(currentSongId);
+    // auto play
+    const playBtn = $(".songControl-menu .play-btn");
+    await playBtn[0].classList.replace("fa-play", "fa-pause");
+    await $("footer audio")[0].play();
+  });
+
+  // on off volume
+  const volumeBtn = $(".songMenu .volume-btn");
+  volumeBtn.on("click", function (e) {
+    if (this.classList.contains("fa-volume-up")) {
+      this.classList.replace("fa-volume-up", "fa-volume-mute");
+      $("footer audio")[0].volume = 0;
+    } else {
+      this.classList.replace("fa-volume-mute", "fa-volume-up");
+      $("footer audio")[0].volume = 1;
+    }
+  });
+
+  // random current song and auto play
+  const randomBtn = $(".songControl-menu .random-btn");
+  randomBtn.on("click", async function (e) {
+    console.log("random");
+    currentSongId = Math.floor(Math.random() * countSong + 1);
+    await callApiChangeInfo(currentSongId);
+    $("footer audio")[0].play();
+    // chane UI
+    const playBtn = $(".songControl-menu .play-btn");
+    playBtn[0].classList.replace("fa-play", "fa-pause");
+  });
+
+  // repeat current song and auto play
+  const repeatBtn = $(".songControl-menu .repeat-btn");
+  repeatBtn.on("click", async function (e) {
+    console.log("repeat");
+    await callApiChangeInfo(currentSongId);
+    $("footer audio")[0].play();
+    // chane UI
+    const playBtn = $(".songControl-menu .play-btn");
+    playBtn[0].classList.replace("fa-play", "fa-pause");
+  });
+}
+var currentSongId = 1;
+var countSong = 15;
+function handlePlaySong() {
+  callApiChangeInfo(currentSongId);
+
+  // change UI
+  const playBtn = $(".songControl-menu .play-btn");
+  playBtn.on("click", function (e) {
+    if (this.classList.contains("fa-play")) {
+      this.classList.replace("fa-play", "fa-pause");
+      $("footer audio")[0].play();
+    } else {
+      this.classList.replace("fa-pause", "fa-play");
+      $("footer audio")[0].pause();
+    }
+  });
+
+  handleAudioLoading();
+  handleMenuSong();
+  handleCickOnListSong();
+}
+// ----------------- start ---------------------------
+function start() {
+  handleCarousel();
+  renderJustHead();
+  renderListSong();
+  handlePlaySong();
 }

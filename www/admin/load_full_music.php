@@ -1,7 +1,7 @@
 <?php
 require 'connect.php';
-$sql = 'SELECT * FROM music';
-$res = $db->query($sql);
+
+$res = $db->query("SELECT music.*, tac_gia.ten_tac_gia FROM `music` JOIN `tac_gia` ON music.id_tac_gia = tac_gia.id;");
 
 $music = array();
 if ($db->affected_rows > 0) {
@@ -9,6 +9,7 @@ if ($db->affected_rows > 0) {
         $music[] = $r;
     }
 }
+
 $db->close();
 
 die(json_encode(
@@ -16,6 +17,4 @@ die(json_encode(
         'status' => true,
         'data' => $music
     )
-)); 
-
-?>
+));

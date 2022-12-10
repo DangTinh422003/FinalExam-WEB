@@ -6,8 +6,7 @@
  * trả về bài hát đó
  */
 
-// $id = $_REQUEST['id'];
-$id = '2';
+$id = $_REQUEST['id'];
 // không nhận được id bài hát
 if (!isset($id)) {
     die(json_encode(
@@ -19,7 +18,7 @@ if (!isset($id)) {
 }
 
 require 'connect.php';
-$sql = "SELECT * FROM music WHERE id = ?;"; // SQL with parameters
+$sql = "SELECT music.*, tac_gia.ten_tac_gia FROM `music` JOIN `tac_gia` ON music.id_tac_gia = tac_gia.id WHERE music.id = ?;";
 $stmt = $db->prepare($sql);
 $stmt->bind_param("i", $id);
 

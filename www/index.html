@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./index.css" />
     <title>Zing MP3 | Nghe tải nhạc chất lượng cao</title>
   </head>
-  
+
   <body>
     <div class="root">
       <div class="row no-gutters">
@@ -27,8 +27,11 @@
           <!-- logo -->
           <div class="sidebar__logo">
             <a href="./index.html">
-              <img src="https://bom.so/YrP55V" alt="logo" />
-              <img src="https://bom.so/Rt9iRl" class="d-none" alt="logo" />
+              <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt="logo" />
+              <img
+                src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.8.1/static/media/icon_zing_mp3_60.f6b51045.svg"
+                class="d-none"
+                alt="logo" />
             </a>
           </div>
           <!-- nav -->
@@ -162,7 +165,7 @@
             </div>
 
             <!-- Mới Phát Hành -->
-            <div class="listSong">
+            <div class="listSong" id="listSong">
               <div class="container">
                 <h2 class="listSong__heading">Mới Phát Hành</h2>
                 <div class="listSong__control">
@@ -466,8 +469,8 @@
                 <img src="./image/nguoi-nhu-anh.jpg" alt="" />
               </div>
               <div class="songInfo-detail">
-                <p class="songname">Yêu em là điều anh không thể ngờ</p>
-                <p class="singer-name">Thành Đạt</p>
+                <p class="songname">Cơn Mưa Ngang Qua</p>
+                <p class="singer-name">Sơn Tùng MTP</p>
               </div>
               <div class="songInfo-more">
                 <div class="icon">
@@ -483,12 +486,13 @@
             <div class="songControl">
               <!-- song control menu -->
               <div class="songControl-menu">
-                <audio src="./music/ConMuaNgangQua-M-TP_39dyg.mp3"></audio>
-                <i class="fad fa-random random-icon"></i>
-                <i class="fas fa-step-backward prev-icon"></i>
+                <!-- <audio src="http://localhost:8080/music/LacTroiTripleDRemix-SonTungMTP-5164670.mp3"></audio> -->
+                <audio src=""></audio>
+                <i class="fad fa-random random-btn"></i>
+                <i class="fas fa-step-backward prev-btn"></i>
                 <i class="fa-sharp fa-solid fa-play play-btn"></i>
-                <i class="fas fa-step-forward next-icon"></i>
-                <i class="fad fa-repeat repeat-icon"></i>
+                <i class="fas fa-step-forward next-btn"></i>
+                <i class="fad fa-repeat repeat-btn"></i>
               </div>
               <!-- song control process -->
               <div class="songControl-process">
@@ -496,7 +500,7 @@
                 <div class="songControl-processbar">
                   <p class="songControl-processbar-line"></p>
                 </div>
-                <span class="time-end">05:20</span>
+                <span class="time-end">4:20</span>
               </div>
             </div>
           </div>
@@ -506,9 +510,9 @@
             <div class="songMenu">
               <i class="far fa-signal-stream"></i>
               <i class="fas fa-microphone-stand"></i>
-              <i class="fas fa-volume-up"></i>
+              <i class="fas fa-volume-up volume-btn"></i>
               <i class="far fa-window-restore"></i>
-              <i class="far fa-line-height"></i>
+              <a href="#listSong"><i class="far fa-line-height"></i></a>
             </div>
           </div>
         </div>
@@ -531,10 +535,7 @@
       crossorigin="anonymous"></script>
     <script src="./index.js"></script>
     <script>
-      handleCarousel();
-      renderJustHead();
-      renderListSong();
-      handleFooter();
+      start();
     </script>
   </body>
 </html>

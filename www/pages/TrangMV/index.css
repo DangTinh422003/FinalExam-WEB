@@ -1,74 +1,130 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital@0;1&family=Poppins:ital,wght@0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital@0;1&family=Poppins:ital,wght@0,400;1,300;1,400&display=swap");
 
 /* ---------------------- gallery --------------------------- */
 .gallery {
-  padding-top: 60px;
-  background: url("https://preview.colorlib.com/theme/hnband/img/video-overlay.png.webp");
+  padding: 30px 0;
 }
-.gallery__heading-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.gallery__heading-title h4 {
-  font-family: "Dancing Script", cursive;
-  font-weight: bold;
-  font-size: 50px;
-  color: #e934ff;
-}
-.gallery__heading-title button {
-  background: linear-gradient(to right top, #613ad0, #cf35f6);
-  height: 50px;
-  padding: 10px 20px;
+.gallery__item {
   border-radius: 8px;
-  color: #fff;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-.gallery__heading-title button:hover {
-  opacity: 0.8;
-}
-.gallery__heading-title button i {
-  margin-right: 4px;
-}
-.gallery__heading-desc {
-  font-family: "Lato", sans-serif;
-  font-size: 50px;
-}
-.gallery__body .card {
-  border: none;
-  outline: none;
-  background: transparent;
-  margin-top: 20px;
-  text-align: center;
-}
-.gallery__body .card img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
   overflow: hidden;
-  object-fit: cover;
-  position: relative;
-  padding: 10px;
+}
+.gallery__item-img {
+  width: 100%;
   transform: scale(1);
-  transition: all linear 0.2s;
+  transition: all 0.2s ease-in-out;
 }
-.gallery__body .card img:hover {
-  transform: scale(1.05);
+.gallery__item-img:hover {
+  transform: scale(1.1);
 }
-.gallery__body .card .songname {
+
+/* ---------------------- zing chart-------------------- */
+.ratingchart .container {
+  position: relative;
+  padding : 30px 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.ratingchart__background-blur {
+  background: url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.8.5/static/media/bg-chart.fd766403.jpg) top/cover no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.ratingchart__background-alpha {
+  z-index: 0;
+  background-image: linear-gradient(180deg, #740091, #2d1a4c);
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.ratingchart__header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ratingchart__header-title {
   font-family: "Lato", sans-serif;
-  font-size: 24px;
   font-weight: bold;
+}
+.ratingchart__header-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 18px;
+  font-size: 20px;
+  color: #9B4DE0;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.ratingchart__header-icon:hover {
+  color: #fff;
+  background: #9B4DE0;
+}
+.ratingChart__item {
+  display: flex;
+  align-items: center;
+  background: rgba(98, 43, 118, 0.7);
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  padding: 10px 0;
+  margin : 5px 0;
+}
+.ratingChart__item:hover {
+  background: rgba(106, 80, 118, 0.7);
+}
+.ratingChart__item p {
   margin: 0;
 }
-.gallery__body .card .singlename {
-  font-size: 20px;
-  margin-top: 4px;
-  font-style: italic;
+.ratingChart__item-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ratingChart__item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ratingChart-rank {
+  padding: 0 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px #50E3C2;
+}
+.ratingChart__songInfo {
+  padding: 0 10px;
+}
+.ratingChart__songname {
+  font-size: 14px;
+  font-weight: bold;
+  color : #e2e2e2;
+}
+.ratingChart__singer {
+  font-size: 12px;
   color: #ccc;
 }
+.ratingChart__view {
+  flex : 1;
+  text-align: end;
+  padding-right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 
 /* ---------------------- listsong --------------------------- */
 .listsong {
@@ -79,7 +135,6 @@
   padding: 0;
   position: relative;
 }
-.listsong .thumbnail {}
 
 .listsong .thumbnail img {
   height: 633px;
@@ -362,12 +417,12 @@
   position: absolute;
   inset: 0;
   padding: 3px;
-  background: linear-gradient(45deg, #7239D6, #C035F0);
+  background: linear-gradient(45deg, #7239d6, #c035f0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
 .footer__contact-nav i:hover {
   cursor: pointer;
-  color : #AF36EB;
+  color: #af36eb;
 }
