@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Comfpatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ---------------------------FONT AWESOME------------------------ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../lib/fontawesome-free-6.2.1-web/css/fontawesome.css">
+    <!----------------------------- BOOSTRAP CDN --------------------------------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!----------------------------- BASE CSS --------------------------------- -->
+    <link rel="stylesheet" href="./style.css">
+    <title>Chủ Đề Nhạc Hot | Tuyển tập nhạc hay chọn lọc</title>
+  </head>
+
+
+  <body>
+    <div class="root">
+      <div class="row no-gutters">
+        <!-- sidebar -->
+          <div class="sidebar">
+            <!-- logo -->
+            <div class="sidebar__logo">
+              <a href="./index.html">
+                <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt="logo" />
+                <img
+                  src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.8.1/static/media/icon_zing_mp3_60.f6b51045.svg"
+                  class="d-none"
+                  alt="logo" />
+              </a>
+            </div>
+            <!-- nav -->
+            <ul class="sidebar__nav">
+              <li><a href="">
+                <i class="sidebar__icon fa-solid fa-list-ul"></i>
+                <span>Cá Nhân</span>
+              </a></li>
+              <li><a href="">
+                <i class="sidebar__icon fa-solid fa-headphones-simple"></i>
+                <span>khám Phá</span>
+              </a></li>
+              <li><a href="">
+                <i class="sidebar__icon fa-solid fa-chart-line"></i>
+                <span>#zingchart</span>
+              </a></li>
+              <li><a href="">
+                <i class="sidebar__icon fa-solid fa-radio"></i>
+                <span>Radio</span>
+              </a></li>
+              <li><a href="">
+                <i class="sidebar__icon fa-regular fa-rectangle-list"></i>
+                <span>Theo Dõi</span>
+              </a></li>
+              <li class="underline"></li>
+              <li><a href="">
+                <i class="sidebar__icon fa-solid fa-music"></i>
+                <span>Nhạc Mới</span>
+              </a></li>
+              <li><a href="javascript:location.reload(true)">
+                <i class="sidebar__icon fa-brands fa-squarespace"></i>
+                <span>Thể Loại</span>
+              </a></li>
+              <li><a href="../TrangTop100/index.html">
+                <i class="sidebar__icon fa-regular fa-star"></i>
+                <span>Top 100</span>
+              </a></li>
+              <li><a href="">
+                <i class="sidebar__icon fa-solid fa-clapperboard"></i>
+                <span>MV</span>
+              </a></li>
+            </ul>
+
+        </div>
+
+
+
+
+
+        <!-- main -->
+        <div class="main">
+          <!-- header -->
+          <header class="header">
+            <div class="container">
+              <div class="header__search">
+                <div class="header__search-control">
+                  <i class="fa-solid fa-arrow-left"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="header__search-box">
+                  <label for="header-search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                  <input id='header-search' type="text" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát...">
+                </div>
+              </div>
+              <div class="header__user">
+                <i class="fa-solid fa-shirt"></i>
+                <i class="fa-solid fa-gem"></i>
+                <i class="fa-solid fa-upload"></i>
+                <i class="fa-solid fa-gears"></i>
+                <i class="fa-solid fa-user"></i>
+              </div>
+            </div>
+          </header>
+          
+
+          <!-- content -->
+          <div class="content">
+            <div class="container">
+              <div class="row">
+                    <div class="banner_img">
+                        <a href="#" >
+                            <img src="./img/banner_2.png" alt="" class="banner_img" style="border-radius:10px">
+                        </a>
+                    </div>
+                </div><br> 
+
+
+                
+                <div class="category1">
+                  <h4>Tâm trạng và hoạt động</h4>
+                  <div class="row" style="justify-content:flex">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                      <div class="cate_item">
+                        <a href="./dinner/dinner.html">
+                          <div class="card" style="width: 13rem;">
+                            <img class="card-img-top" src="./img/dinner.png" alt="Card image cap" style="margin:0">
+                          </div>                        
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                      <div class="cate_item">
+                        <a href="#">
+                          <div class="card text-white" style="width: 13rem;">
+                            <img class="card-img-top" src="./img/dulich.png" alt="Card image cap" style="margin:0">
+                          </div>                        
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                      <div class="cate_item">
+                        <a href="#">
+                          <div class="card" style="width: 13rem;">
+                            <img class="card-img-top" src="./img/tinhyeu.png" alt="Card image cap" style="margin:0">
+                          </div>                        
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                      <div class="cate_item">
+                        <a href="#">
+                          <div class="card" style="width: 13rem;">
+                            <img class="card-img-top" src="./img/yoga.png" alt="Card image cap" style="margin:0">
+                          </div>                        
+                        </a>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div><br>
+
+                <div class="category2">
+                  <h4>EDM</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/edm.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">EDM Now</a><br>
+                      <a href="#" class="singer_info">Alan Walker, </a>
+                      <a href="#" class="singer_info">Lost Frequency, </a>
+                      <a href="#" class="singer_info">twocolors...</a>
+                    </div>
+                        
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/dance_pop.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Dance Pop</a><br>
+                      <a href="#" class="singer_info">Rita Ora, </a>
+                      <a href="#" class="singer_info">Selena Gomez, </a>
+                      <a href="#" class="singer_info">Katy Pery...</a>
+                    </div>    
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/edm_hits.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Today's EDM Hits</a><br>
+                      <a href="#" class="singer_info">Alan Walker, </a>
+                      <a href="#" class="singer_info">Alesso, </a>
+                      <a href="#" class="singer_info">R3hab...</a>
+                    </div>    
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/dance_rewind.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Dance Rewind</a><br>
+                      <a href="#" class="singer_info">Avicii, </a>
+                      <a href="#" class="singer_info">The Chainsmokers, </a>
+                      <a href="#" class="singer_info">Calvin Harris...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/acoustic_edm.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Acoustic EDM</a><br>
+                      <a href="#" class="singer_info">Rita Ora, </a>
+                      <a href="#" class="singer_info">Hasley, </a>
+                      <a href="#" class="singer_info">Dermot Kennedy...</a>
+                    </div> 
+
+                  </div>
+
+                </div><br>
+                
+
+
+                <div class="category3">
+                  <h4>Trữ tình & Bolero</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+                    
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/bolero_hay.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Bolero hay nhất</a><br>
+                      <a href="#" class="singer_info">Phi Nhung, </a>
+                      <a href="#" class="singer_info">Mạnh Quỳnh, </a>
+                      <a href="#" class="singer_info">Như Quỳnh...</a>
+                    </div>  
+                    
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/bolero_trutinh.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Bolero trữ tình</a><br>
+                      <a href="#" class="singer_info">Hồng Phượng, </a>
+                      <a href="#" class="singer_info">Minh Luân, </a>
+                      <a href="#" class="singer_info">Khưu Huy Vũ...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/best_bolero.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">The Best Of Bolero</a><br>
+                      <a href="#" class="singer_info">Chế Linh, </a>
+                      <a href="#" class="singer_info">Sơn Tuyền, </a>
+                      <a href="#" class="singer_info">Giao Linh...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/nhac_que_huong.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Nhạc quê hương</a><br>
+                      <a href="#" class="singer_info">Tố My, </a>
+                      <a href="#" class="singer_info">Khưu Huy Vũ, </a>
+                      <a href="#" class="singer_info">Lưu Ánh Loan...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/bolero_ngoisaotre.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Bolero ngôi sao trẻ</a><br>
+                      <a href="#" class="singer_info">Quỳnh Loan, </a>
+                      <a href="#" class="singer_info">Dương Nghi Đình, </a>
+                      <a href="#" class="singer_info">Ngọc Phụng...</a>
+                    </div>
+
+
+                  </div>
+                </div><br>
+
+
+                <div class="category4">
+                  <h4>Remix</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/beast_mode_hiphop.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Beast Mode Hip Hop</a><br>
+                      <a href="#" class="singer_info">Travis Scott, </a>
+                      <a href="#" class="singer_info">Eminem, </a>
+                      <a href="#" class="singer_info">DaBaby...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/trap_hits.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Trap Hits</a><br>
+                      <a href="#" class="singer_info">Migos, </a>
+                      <a href="#" class="singer_info">Lil Nas X, </a>
+                      <a href="#" class="singer_info">21 Savage...</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/hiphop_sampling.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Hip-Hop Samplings</a><br>
+                      <a href="#" class="singer_info">Drake, </a>
+                      <a href="#" class="singer_info">Tyga, </a>
+                      <a href="#" class="singer_info">Playboi Carti...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/hiphop_twelve_carat.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Twelve Carat Toothace</a><br>
+                      <a href="#" class="singer_info">Post Malone</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/90s_hiphop.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">90s Hip-Hop</a><br>
+                      <a href="#" class="singer_info">2Pac, </a>
+                      <a href="#" class="singer_info">Lauryn Hill, </a>
+                      <a href="#" class="singer_info">Jay-Z... </a>
+                    </div>
+                  </div>
+                </div><br>
+
+                <div class="category5">
+                  <h4>R&B</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/are&be.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Are & Be</a><br>
+                      <a href="#" class="singer_info">Beyoncé, </a>
+                      <a href="#" class="singer_info">SZA, </a>
+                      <a href="#" class="singer_info">Babyface... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/slow_jamz.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Slow Jamz</a><br>
+                      <a href="#" class="singer_info">Kehlani, </a>
+                      <a href="#" class="singer_info">keshi, </a>
+                      <a href="#" class="singer_info">H.E.R ... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/ne_yo.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Self Explanatory</a><br>
+                      <a href="#" class="singer_info">Ne-Yo</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/dinhcao_r&b.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Đỉnh Cao R&B</a><br>
+                      <a href="#" class="singer_info">Alicia Keys, </a>
+                      <a href="#" class="singer_info">Usher, </a>
+                      <a href="#" class="singer_info">Chris Brown... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/alternative_r&b.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Alternative R&B</a><br>
+                      <a href="#" class="singer_info">Jorja Smith, </a>
+                      <a href="#" class="singer_info">Lucky Daye, </a>
+                      <a href="#" class="singer_info">Fousheé... </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="category6">
+                  <h4>Nhạc phim</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/nhac_phim_au_my.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Hành động Âu Mỹ</a><br>
+                      <a href="#" class="singer_info">Travis Scott, </a>
+                      <a href="#" class="singer_info">Billie Eilish, </a>
+                      <a href="#" class="singer_info">Adele... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/nhac_phim_viet_nam.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Nhạc phim Việt Nam</a><br>
+                      <a href="#" class="singer_info">Phan Mạnh Quỳnh, </a>
+                      <a href="#" class="singer_info">Đức Phúc... </a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/nhac_phim_em_va_trinh.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Em Và Trịnh</a><br>
+                      <a href="#" class="singer_info">Bùi Lan Hương, </a>
+                      <a href="#" class="singer_info">Avin Lu</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/nhac_phim_wednesday.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Nhạc phim Wednesday</a><br>
+                      <a href="#" class="singer_info">Danny Elfman, </a>
+                      <a href="#" class="singer_info">Lady Gaga... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/nhac_phim_hq.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Nhạc phim Hàn Quốc</a><br>
+                      <a href="#" class="singer_info">SS501, </a>
+                      <a href="#" class="singer_info">Seo In Guk, </a>
+                      <a href="#" class="singer_info">IU... </a>
+                    </div>
+
+                  </div>
+                </div><br>
+
+                <div class="category7">
+                  <h4>Nhạc Không Lời</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/hoa_tau.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Hòa Tấu Bolero</a><br>
+                      <a href="#" class="singer_info">Hải Phượng, </a>
+                      <a href="#" class="singer_info">Phương Thùy, </a>
+                      <a href="#" class="singer_info">Hòa Tấu... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/guitar_viet.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Guitar Việt</a><br>
+                      <a href="#" class="singer_info">Đỗ Đình Phương, </a>
+                      <a href="#" class="singer_info">Võ Tá Hân, </a>
+                      <a href="#" class="singer_info">Trần Hoài Phương... </a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/nhac_khong_loi.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Nhạc không lời hay nhất</a><br>
+                      <a href="#" class="singer_info">Yanni, </a>
+                      <a href="#" class="singer_info">Richard Clayderman, </a>
+                      <a href="#" class="singer_info">Kenny G... </a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/instrumental_today.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Instrumental Today</a><br>
+                      <a href="#" class="singer_info">Jim Brickman, </a>
+                      <a href="#" class="singer_info">The Piano Guys... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/trinh_cong_son.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Hòa tấu Trịnh Công Sơn</a><br>
+                      <a href="#" class="singer_info">Mèo Ú Guitar, </a>
+                      <a href="#" class="singer_info">Trần Hoài Phương, </a>
+                      <a href="#" class="singer_info">Guitar Vĩnh Tâm... </a>
+                    </div>
+
+                  </div>
+                </div><br>
+
+                <div class="category8">
+                  <h4>Nhạc Việt bất hủ</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/mot_thoi_da_xa.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Một Thời Đã Xa</a><br>
+                      <a href="#" class="singer_info">Phương Thanh, </a>
+                      <a href="#" class="singer_info">Đan Trường, </a>
+                      <a href="#" class="singer_info">Lam Trường... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/sang_tac_bat_hu.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Sáng Tác Bất Hủ</a><br>
+                      <a href="#" class="singer_info">Tuấn Ngọc, </a>
+                      <a href="#" class="singer_info">Vũ Khanh, </a>
+                      <a href="#" class="singer_info">Mỹ Linh... </a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/nhac_tre_huyen_thoai.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Nhạc Trẻ Huyền Thoại</a><br>
+                      <a href="#" class="singer_info">Đan Trường, </a>
+                      <a href="#" class="singer_info">Ưng Hoàng Phúc, </a>
+                      <a href="#" class="singer_info">Duy Mạnh... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/nhac_phap.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Nhạc Pháp Lời Việt</a><br>
+                      <a href="#" class="singer_info">Bằng Kiều, </a>
+                      <a href="#" class="singer_info">Tóc Tiên, </a>
+                      <a href="#" class="singer_info">Minh Tuyết... </a>
+                    </div>
+                    
+                  </div>
+                </div><br>
+              
+                <div class="category8">
+                  <h4>Jazz</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+                    
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/super_blue.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">SuperBlue</a><br>
+                      <a href="#" class="singer_info">Kurt Elling, </a>
+                      <a href="#" class="singer_info">Charlie Hunter</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/jazz_pop.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Jazz Pop</a><br>
+                      <a href="#" class="singer_info">Norah Jones, </a>
+                      <a href="#" class="singer_info">Jamie Cullum, </a>
+                      <a href="#" class="singer_info">Diana Krall... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/jazz_today.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Jazz Today</a><br>
+                      <a href="#" class="singer_info">Caity Gyorgy, </a>
+                      <a href="#" class="singer_info">Adam Blackstone, </a>
+                      <a href="#" class="singer_info">FKJ... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/jazz_50.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Jazz 50: Zing Choice</a><br>
+                      <a href="#" class="singer_info">Frank Sinatra, </a>
+                      <a href="#" class="singer_info">Tony Bennett, </a>
+                      <a href="#" class="singer_info">Herbie Hancock... </a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/jazz_viet.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Jazz Việt</a><br>
+                      <a href="#" class="singer_info">Hồ Trung Dũng, </a>
+                      <a href="#" class="singer_info">Cheung, </a>
+                      <a href="#" class="singer_info">Nguyên Thảo... </a>
+                    </div>
+                    
+                    
+                  </div>
+                </div><br>
+
+                <div class="category9">
+                  <h4>Indie</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+                  
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/indie_viet.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Indie Việt</a><br>
+                      <a href="#" class="singer_info">buitruonglinh, </a>
+                      <a href="#" class="singer_info">Thịnh Suy, </a>
+                      <a href="#" class="singer_info">Chillies... </a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/quy_co_indie.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Quý Cô Indie Việt</a><br>
+                      <a href="#" class="singer_info">Trang, </a>
+                      <a href="#" class="singer_info">Mỹ Anh, </a>
+                      <a href="#" class="singer_info">Vũ Thanh Vân... </a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/chuyen_xe_indie.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Chuyến Xe Indie</a><br>
+                      <a href="#" class="singer_info">Nhạc Của Trang, </a>
+                      <a href="#" class="singer_info">Tùng, </a>
+                      <a href="#" class="singer_info">Ngọt... </a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/tan_man_indie.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Tản Mạn Cùng Indie Việt</a><br>
+                      <a href="#" class="singer_info">Starry Night, </a>
+                      <a href="#" class="singer_info">KoQuet, </a>
+                      <a href="#" class="singer_info">The Cassette... </a>
+                    </div>
+
+                  </div>
+                </div><br>
+
+                <div class="category10">
+                  <h4>Latin</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+                  
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/mis_manos.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Mis Manos</a><br>
+                      <a href="#" class="singer_info">Camilo</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/bailla_reggeaton.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Bailla Reggaeton</a><br>
+                      <a href="#" class="singer_info">Rauw Alajandro, </a>
+                      <a href="#" class="singer_info">Karol G, </a>
+                      <a href="#" class="singer_info">Maluma...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/latin_workout.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Latin Workout</a><br>
+                      <a href="#" class="singer_info">Becky G, </a>
+                      <a href="#" class="singer_info">Rauw Alejandro, </a>
+                      <a href="#" class="singer_info">Ozuna...</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/jbalvin.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Jose</a><br>
+                      <a href="#" class="singer_info">J Balvin</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/women_latin.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Women Of Latin</a><br>
+                      <a href="#" class="singer_info">Becky G, </a>
+                      <a href="#" class="singer_info">Anitta, </a>
+                      <a href="#" class="singer_info">Karol G...</a>
+                    </div>
+
+                    
+
+                  </div>
+                </div><br>
+
+                <div class="category11">
+                  <h4>Acoustic</h4>
+                  <div class="row" style="display:flex; justify-content:space-around">
+                  
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/acoustic_now.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Acoustic now</a><br>
+                      <a href="#" class="singer_info">Conan Gray, </a>
+                      <a href="#" class="singer_info">Olivia Rodrigo, </a>
+                      <a href="#" class="singer_info">Jeremy Zucker...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/kpop_acoustic.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Acoustic Relax</a><br>
+                      <a href="#" class="singer_info">Coffeeboy, </a>
+                      <a href="#" class="singer_info">Stella Jang, </a>
+                      <a href="#" class="singer_info">Chamsom...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/huong_mua_he.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Hương Mùa Hè</a><br>
+                      <a href="#" class="singer_info">Suni Hạ Linh, </a>
+                      <a href="#" class="singer_info">Hoàng Dũng, </a>
+                      <a href="#" class="singer_info">GREY D...</a>
+                    </div>
+
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/vpop_acoustic.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Acoustic Tình Ca</a><br>
+                      <a href="#" class="singer_info">Thanh Lam, </a>
+                      <a href="#" class="singer_info">Trần Thu Hà, </a>
+                      <a href="#" class="singer_info">Thanh Hà...</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/acoustic_thuy_chi.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Thong Dong</a><br>
+                      <a href="#" class="singer_info">Thùy Chi</a>
+                    </div>
+                  </div>
+                </div><br>
+
+                <div class="category12">
+                  <h4>Rock</h4>
+                  <div class="row" style="display:flex;justify-content:space-around;">
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/10s_rock.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">2010s Pop Rock</a><br>
+                      <a href="#" class="singer_info">Imagine Dragons, </a>
+                      <a href="#" class="singer_info">Fall Out Boy, </a>
+                      <a href="#" class="singer_info">The 1975...</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/rock_zingchoice.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Rock 50: Zing Choice</a><br>
+                      <a href="#" class="singer_info">Nothing But Thieves, </a>
+                      <a href="#" class="singer_info">Metanoia, </a>
+                      <a href="#" class="singer_info">Linkin Park...</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/rock_chicks.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Rock Chicks</a><br>
+                      <a href="#" class="singer_info">Avril Lavigne, </a>
+                      <a href="#" class="singer_info">Olivia Rodrigo, </a>
+                      <a href="#" class="singer_info">Leah Kate...</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/simple_plan.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Harder than It Looks</a><br>
+                      <a href="#" class="singer_info">Simple Plan</a>
+                    </div>
+
+                    <div class="cate_item" style="display:block">
+                      <a href="#">
+                        <div class="card" style="width: 10rem;">
+                          <img class="card-img-top" src="./img/rock_scropions.png" alt="Card image cap" style="margin:0">
+                        </div>
+                      </a>
+                      <a href="#" class="cate_link">Rock Believer (Deluxe)</a><br>
+                      <a href="#" class="singer_info">Scorpions</a>
+                    </div>
+
+                    
+
+                  </div>
+                </div>
+
+                
+          
+              
+              </div>
+            </div>
+          </div>
+                
+              
+                
+        </div>
+          
+    </div>
+  </div>
+
+    
+
+
+
+
+
+
+
+
+    <!----------------------------------BOOSTRAP------------------------------------- -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-----------------------------------JQUERY------------------------------------- -->
+    <script src='../lib/Jquery.js'></script>
+  </body>
+</html>

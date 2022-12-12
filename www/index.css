@@ -53,6 +53,25 @@
 }
 
 
+/* ---------------------- gallery --------------------------- */
+.gallery {
+  padding: 30px 0;
+}
+.gallery__item {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.gallery__item-img {
+  width: 100%;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+.gallery__item-img:hover {
+  transform: scale(1.1);
+}
+
+
+
 /* ----------------------- justHeard --------------------------- */
 .justHeard {
   margin-top: 50px;

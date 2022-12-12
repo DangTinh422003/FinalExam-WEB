@@ -1,0 +1,201 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400&display=swap");
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: #170F23;
+  color :#fff;
+}
+
+
+/* ------------ sidebar ----------- */
+.sidebar {
+  position: fixed;
+  background: #231b2e;
+  height: 100vh;
+}
+.sidebar__logo {
+  height: 70px;
+}
+.sidebar__logo img {
+  height: 60%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+.sidebar__icon {
+  margin: 0 10px;
+}
+.sidebar__nav {
+  position: relative;
+}
+.sidebar__nav li {
+  position: relative;
+  padding: 0 20px;
+}
+.sidebar__nav li.underline {
+  width: 80%;
+  height: 2px;
+  background: #ccc;
+  margin : 20px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+} 
+.sidebar__nav li:hover {
+  background: #393243;
+}
+.sidebar__nav li:hover::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #9b4de0;
+}
+.sidebar__nav a {
+  color: #dadada;
+  opacity: 0.9;
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+  padding-right: 100px;
+}
+.sidebar__nav a:hover {
+  color: #fff;
+  opacity: 1;
+  text-decoration: none;
+}
+
+
+
+/* ------------ header ----------- */
+.header .container {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__search {
+  display: flex;
+  width: 50%;
+  color : #DADADA;
+}
+.header__search-control {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.header__search-control i{
+  font-size: 20px;
+  color : #585361;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.header__search-box {
+  background: #2F2739;
+  width: 100%;
+  display: flex;
+  padding : 0 15px;
+  border-radius: 20px;
+}
+.header__search-box label {
+  margin : 0;
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+}
+.header__search-box input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  caret-color : #fff;
+  flex : 1;
+  padding : 10px 0;
+}
+.header__search-box input::placeholder {
+  color : #DADADA;
+}
+.header__user i {
+  background: #2F2739;
+  color : #C2C2C2;
+  padding : 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.header__user i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* .banner{
+  position: absolute;
+  display: flex;
+  width: -webkit-fill-available;
+  height: 350px;
+  object-fit: cover;
+} */
+
+.card{
+  border: 0px;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.card-img-top{
+ border-radius: inherit;
+ position: relative;
+}
+
+
+.card:hover{
+transform: scale(1.1);
+}
+
+.cate_item{
+max-width: min-content;
+}
+
+.cate_link{
+color:azure;
+font-weight: 600;
+}
+
+.cate_link:hover, .singer_info:hover{
+color:#9b4de0;
+text-decoration: none;
+
+}
+
+.singer_info{
+color:gray;
+font-size: small;
+}
+
+
+
+
+/* ------------ footer ----------- */

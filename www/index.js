@@ -119,15 +119,11 @@ function handleCickOnListSong() {
         item.classList.replace("fa-pause", "fa-play");
       });
       this.querySelector("i").classList.replace("fa-play", "fa-pause");
-      // if ($("footer .play-btn")[0].classList.contains('fa-play')) {
       $("footer .play-btn")[0].classList.replace("fa-play", "fa-pause");
-      // }
       $("footer audio")[0].play();
     } else {
       this.querySelector("i").classList.replace("fa-pause", "fa-play");
-      // if ($("footer .play-btn")[0].classList.contains('fa-pause')) {
       $("footer .play-btn")[0].classList.replace("fa-pause", "fa-play");
-      // }
       $("footer audio")[0].pause();
     }
   });
@@ -271,6 +267,7 @@ function handlePlaySong() {
   handleCickOnListSong();
 }
 // ----------------- start ---------------------------
+
 function start() {
   handleCarousel();
   renderJustHead();
