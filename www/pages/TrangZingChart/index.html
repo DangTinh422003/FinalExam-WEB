@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Comfpatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.8.1/static/media/icon_zing_mp3_60.f6b51045.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="../../font-awesome-pro-5/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="./Base.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+    <title>#zingchart | Xem bài hát, album, MV đang hot nhất hiện tại</title>
+  </head>
+  <body>
+    <div class="root">
+      <div class="row no-gutters">
+        <!-- sidebar -->
+        <div class="sidebar">
+          <!-- logo -->
+          <div class="sidebar__logo">
+            <a href="./index.html">
+              <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt="logo" />
+              <img
+                src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.8.1/static/media/icon_zing_mp3_60.f6b51045.svg"
+                class="d-none"
+                alt="logo" />
+            </a>
+          </div>
+          <!-- nav -->
+          <ul class="sidebar__nav">
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-solid fa-list-ul"></i>
+                <span>Cá Nhân</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../index.html">
+                <i class="sidebar__icon fa-solid fa-headphones-simple"></i>
+                <span>khám Phá</span>
+              </a>
+            </li>
+            <li>
+              <a href="./index.html">
+                <i class="sidebar__icon fa-solid fa-chart-line"></i>
+                <span>#zingchart</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-solid fa-radio"></i>
+                <span>Radio</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-regular fa-rectangle-list"></i>
+                <span>Theo Dõi</span>
+              </a>
+            </li>
+            <li class="underline"></li>
+            <li>
+              <a href="">
+                <i class="sidebar__icon fa-solid fa-music"></i>
+                <span>Nhạc Mới</span>
+              </a>
+            </li>
+            <li>
+              <a href="../TrangTheLoai/index.html">
+                <i class="sidebar__icon fa-brands fa-squarespace"></i>
+                <span>Thể Loại</span>
+              </a>
+            </li>
+            <li>
+              <a href="../TrangTop100/index.html">
+                <i class="sidebar__icon fa-regular fa-star"></i>
+                <span>Top 100</span>
+              </a>
+            </li>
+            <li>
+              <a href="../TrangMV/index.html">
+                <i class="sidebar__icon fa-solid fa-clapperboard"></i>
+                <span>MV</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- main -->
+      <div class="main">
+        <div class="container">
+          <!-- header -->
+          <header class="header">
+            <div class="container justify-content-between justify-content-end">
+              <div class="header__search d-md-flex d-none">
+                <div class="header__search-control">
+                  <i class="fa-solid fa-arrow-left"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="header__search-box d-md-flex d-none">
+                  <label for="header-search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                  <input id="header-search" type="text" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát..." />
+                </div>
+              </div>
+              <div class="header__user">
+                <i class="fa-solid fa-shirt"></i>
+                <i class="fa-solid fa-gem"></i>
+                <i class="fa-solid fa-upload"></i>
+                <i class="fa-solid fa-gears"></i>
+                <i class="fa-solid fa-user"></i>
+              </div>
+            </div>
+          </header>
+
+          <!-- ------------------------------ content ----------------------------- -->
+          <div class="content">
+            <div class="heading">
+              <h1>#zingchart</h1>
+              <div class="container-icon-play">
+                <i class="fa-solid fa-circle-play"></i>
+              </div>
+            </div>
+
+            <div class="rating d-md-block d-none">
+              <div class="container">
+                <div id="drawChart" fill="transparent">
+                  <script>
+                    anychart.onDocumentReady(function () {
+                      // add data
+                      var data = [
+                        ["01:00", 1, 1, 1],
+                        ["02:00", 4, 2, 1],
+                        ["03:00", 6, 3, 2],
+                        ["04:00", 8, 3, 1],
+                        ["05:00", 12, 2, 0],
+                        ["06:00", 13, 5, 1],
+                        ["07:00", 15, 6, 1],
+                        ["08:00", 16, 9, 1],
+                        ["09:00", 16, 10, 4],
+                        ["10:00", 17, 11, 5],
+                        ["11:00", 17, 13, 6],
+                        ["12:00", 17, 14, 7],
+                        ["13:00", 17, 14, 10],
+                        ["14:00", 17, 14, 12],
+                        ["15:00", 19, 16, 12],
+                        ["16:00", 20, 17, 14],
+                        ["17:00", 20, 19, 16],
+                        ["18:00", 20, 20, 17],
+                        ["19:00", 20, 20, 20],
+                        ["20:00", 20, 22, 20],
+                      ];
+
+                      // create a data set
+                      var dataSet = anychart.data.set(data);
+
+                      // map the data for all series
+                      var firstSeriesData = dataSet.mapAs({ x: 0, value: 1 });
+                      var secondSeriesData = dataSet.mapAs({ x: 0, value: 2 });
+                      var thirdSeriesData = dataSet.mapAs({ x: 0, value: 3 });
+
+                      // create a line chart
+                      var chart = anychart.line();
+
+                      // create the series and name them
+                      var firstSeries = chart.line(firstSeriesData);
+                      firstSeries.name("TOP 1");
+                      var secondSeries = chart.line(secondSeriesData);
+                      secondSeries.name("TOP 2");
+                      var thirdSeries = chart.line(thirdSeriesData);
+                      thirdSeries.name("TOP 3");
+
+                      // add a legend
+                      chart.legend().enabled(true);
+
+                      // specify where to display the chart
+                      chart.container("drawChart");
+
+                      // draw the resulting chart
+                      chart.draw();
+
+                      // customize the series markers
+                      firstSeries.hovered().markers().type("circle").size(4);
+                      secondSeries.hovered().markers().type("circle").size(4);
+                      thirdSeries.hovered().markers().type("circle").size(4);
+
+                      // turn on crosshairs and remove the y hair
+                      chart.crosshair().enabled(true).yStroke(null).yLabel(false);
+
+                      // change the tooltip position
+                      chart.tooltip().positionMode("point");
+                      chart.tooltip().position("right").anchor("left-center").offsetX(5).offsetY(5);
+
+                      // customize the series stroke in the normal state
+                      firstSeries.normal().stroke("#4a90e2", 2);
+                      secondSeries.normal().stroke("#50e3c2", 2);
+                      thirdSeries.normal().stroke("#e35050", 2);
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+            <!-- -------------------- list song ----------------------------- -->
+            <div class="listSong">
+              <div class="listSong__list-item">
+                <div class="row">
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number-top-1">1</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img01.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Hoá Thành Pháo Hoa Rơi Xuống Vì Anh(/化作烟火为你坠落)</h4>
+                        <a class="singlename">Viên Tiểu Uy, A Thần</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Hoá Thành Pháo Hoa Rơi Xuống Vì Anh(Single)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">04:52</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number-top-2">2</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img02.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Một Triệu Khả Năng(一百万个可能)</h4>
+                        <a class="singlename">Christine Welch</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Một Triệu Khả Năng(Single)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">04:30</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number-top-3">3</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img03.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Là Anh(是你)</h4>
+                        <a class="singlename">Mộng Nhiên</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Là Anh(Single)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">04:52</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number">4</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img04.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Thuần Khiết(纯白Duet)</h4>
+                        <a class="singlename">Trương Vỹ/ Vương Vận Vận</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Ngôi Sao Sáng Nhất Bầu Trời Đêm(OST)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">03:01</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number">5</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img05.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Home</h4>
+                        <a class="singlename">Thái Từ Khôn</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Home(Single)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">02:22</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number">6</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img06.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Phong Dạ Hành(风夜行)</h4>
+                        <a class="singlename">Tưởng Tuyết Nhi</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Phong Dạ Hành(Single)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">03:52</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number">7</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img07.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Học Tiếng Mèo Kêu(学猫叫)</h4>
+                        <a class="singlename">Tiêu Phan Phan, Tiểu Phong Phong</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Học Tiếng Mèo Kêu(Single)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">03:49</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number">8</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img08.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Không Có Lý Do( 没有理由)</h4>
+                        <a class="singlename">Ryan.B</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Không Có Lý Do(Single)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">03:35</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number">9</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img09.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Bạch Nguyệt Quang Và Nốt Chu Sa(白月光与朱砂痣)</h4>
+                        <a class="singlename">Đại Tử</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Bạch Nguyệt Quang Và Nốt Chu Sa(Single)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">03:27</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-12">
+                    <div class="item">
+                      <div class="song-prefix col-1">
+                        <span class="number">10</span>
+                      </div>
+                      <div class="wrap-img"><img src="./images/img10.jpg" alt="" /></div>
+                      <div class="body-item">
+                        <h4 class="songname">Thiếu Niên(少年)</h4>
+                        <a class="singlename">Mộng Nhiên</a>
+                      </div>
+                      <div class="media-center">
+                        <div class="album-infor">
+                          <a class="name">Thiếu Niên(Single)</a>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                        <div class="level">
+                          <div class="duration">03:58</div>
+                        </div>
+                        <div class="icon-song">
+                          <i class="fa-solid fa-microphone-lines"></i>
+                          <i class="fa-regular fa-heart"></i>
+                          <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="listSong__control">
+                  <button>Xem top 100</button>
+                </div>
+              </div>
+            </div>
+            <!-- end content -->
+          </div>
+        </div>
+        <!-- ------------------------------ BẢNG XẾP HẠNG ---------------------------------- -->
+        <div class="charts">
+          <div class="container">
+            <h2 class="charts__heading">Bảng Xếp Hạng Tuần</h2>
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12">
+                <!-- subheading -->
+                <div class="charts__subheading">
+                  <h3 class="charts__subheading-title">Việt Nam</h3>
+                  <i class="fa-solid fa-circle-play"></i>
+                </div>
+                <!-- table list song -->
+                <ul class="charts__tablelist">
+                  <!-- item -->
+                  <li class="VN_01">
+                    <p class="charts__tablelist_rankNum">1</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-01">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-01">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-01">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="VN_02">
+                    <p class="charts__tablelist_rankNum">2</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-02">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-02">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-02">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="VN_03">
+                    <p class="charts__tablelist_rankNum">3</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-03">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-03">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-03">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="VN_04">
+                    <p class="charts__tablelist_rankNum">4</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-04">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-04">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-04">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="VN_05">
+                    <p class="charts__tablelist_rankNum">5</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-05">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-05">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-05">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <li class="more">
+                    <div class="more-song">
+                      <button>Xem tất cả</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12">
+                <!-- subheading -->
+                <div class="charts__subheading">
+                  <h3 class="charts__subheading-title">K-Pop</h3>
+                  <i class="fa-solid fa-circle-play"></i>
+                </div>
+                <!-- table list song -->
+                <ul class="charts__tablelist">
+                  <!-- item -->
+                  <li class="KPOP_01">
+                    <p class="charts__tablelist_rankNum">1</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-01">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-01">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-01">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="KPOP_02">
+                    <p class="charts__tablelist_rankNum">2</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-02">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-02">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-02">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="KPOP_03">
+                    <p class="charts__tablelist_rankNum">3</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-03">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-03">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-03">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="KPOP_04">
+                    <p class="charts__tablelist_rankNum">4</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-04">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-04">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-04">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="KPOP_05">
+                    <p class="charts__tablelist_rankNum">5</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-05">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-05">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-05">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <li class="more">
+                    <div class="more-song">
+                      <button>Xem tất cả</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-12">
+                <!-- subheading -->
+                <div class="charts__subheading">
+                  <h3 class="charts__subheading-title">US-UK</h3>
+                  <i class="fa-solid fa-circle-play"></i>
+                </div>
+                <!-- table list song -->
+                <ul class="charts__tablelist">
+                  <!-- item -->
+                  <li class="USUK_01">
+                    <p class="charts__tablelist_rankNum">1</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-01">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-01">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-01">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="USUK_02">
+                    <p class="charts__tablelist_rankNum">2</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-02">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-02">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-02">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="USUK_03">
+                    <p class="charts__tablelist_rankNum">3</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-03">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-03">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-03">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="USUK_04">
+                    <p class="charts__tablelist_rankNum">4</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-04">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-04">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-04">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <!-- item -->
+                  <li class="USUK_05">
+                    <p class="charts__tablelist_rankNum">5</p>
+                    <div class="charts__tablelist__wrapSongInfo">
+                      <img src="https://bom.so/pOxLqx" alt="" />
+                      <div class="charts__tablelist__songInfo">
+                        <p class="song-name">Sao Cũng Được</p>
+                        <p class="singer-name">Thành Đạt</p>
+                      </div>
+                      <div class="charts__tablelist__icon">
+                        <i class="icon-05">-</i>
+                      </div>
+                    </div>
+                    <p class="timer">03:21</p>
+                    <div class="icon-song-05">
+                      <i class="fa-solid fa-microphone-lines"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="play-btn-05">
+                      <i class="fa-solid fa-play"></i>
+                    </div>
+                  </li>
+                  <li class="more">
+                    <div class="more-song">
+                      <button>Xem tất cả</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- end row-->
+            </div>
+            <!--end container-->
+          </div>
+          <!--end charts-->
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------------BOOSTRAP------------------------------------- -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <!-- file script -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

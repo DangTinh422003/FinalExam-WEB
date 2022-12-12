@@ -1,0 +1,770 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital@0;1&family=Poppins:ital,wght@0,400;1,300;1,400&display=swap");
+.content {
+  overflow: hidden;
+  margin: 0;
+}
+.listSong {
+  overflow: hidden;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+  font-family: "Lato", sans-serif;
+  margin-right: 20px;
+}
+.container-icon-play i::before {
+  font-size: 40px;
+  color: #9b4de0;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* ------------------------- rating -------------------------- */
+.heading {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.content .rating {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.rating .anychart-credits {
+  display: none;
+}
+#drawChart {
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  width: 95%;
+}
+path {
+  fill: rgba(57, 50, 67, 0.3);
+}
+
+/* ----------------------------- list Song -------------------------------- */
+.listSong .col {
+}
+.listSong__list-item {
+}
+.listSong .item {
+  overflow: hidden;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  border-bottom: 1px hsla(0, 0%, 100%, 0.1) solid;
+  padding : 5px;
+}
+.listSong .item:hover {
+  background: #2f2739;
+  border-radius: 6px;
+}
+.song-prefix {
+  margin-right: 15px !important;
+}
+.song-prefix .number-top-1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  -webkit-text-stroke: 1px #4a90e2;
+  min-width: 18px;
+  color: rgba(74, 144, 226, 0);
+  font-size: 45px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  margin-top: 2px;
+}
+.song-prefix .number-top-2 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  -webkit-text-stroke: 1px #50e3c2;
+  min-width: 18px;
+  color: rgba(74, 144, 226, 0);
+  font-size: 45px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  margin-top: 2px;
+}
+.song-prefix .number-top-3 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  -webkit-text-stroke: 1px #e35050;
+  min-width: 18px;
+  color: rgba(74, 144, 226, 0);
+  font-size: 45px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  margin-top: 2px;
+}
+.song-prefix .number {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  -webkit-text-stroke: 1.5px white;
+  min-width: 18px;
+  color: rgba(74, 144, 226, 0);
+  font-size: 45px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  margin-top: 2px;
+}
+.song-prefix .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #777777;
+  margin-left: 64px;
+  margin-top: -82px;
+  font-size: 60px;
+  font-weight: lighter;
+  padding-left: 16px;
+}
+.listSong .item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+
+}
+.listSong .body-item {
+  padding: 0 10px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.listSong .body-item .songname {
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+}
+.listSong .body-item .singlename {
+  font-size: 12px;
+  color: #777777;
+  display: inline-block;
+  margin-top: 0px;
+  font-weight: 500;
+  width: 10px;
+  white-space: nowrap;
+}
+.listSong .body-item .singlename:hover {
+  color: #bc6fe6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.listSong .play-btn {
+  background: #2f2739;
+  opacity: 0.7;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 15px;
+  left: 147px;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  display: none;
+}
+.listSong .item:hover .play-btn {
+  display: block;
+}
+.listSong .play-btn i {
+  line-height: 64px;
+  color: #fff;
+}
+.listSong .media-right {
+  display: flex;
+  align-items: center;
+}
+.listSong .media-right .icon-song i {
+  margin: 0 10px;
+  display: none;
+  cursor: pointer;
+}
+.listSong .item .icon-song {
+  display: flex;
+  align-items: center;
+}
+.listSong .item:hover .icon-song i {
+  display: block;
+}
+.listSong .media-right .icon-song i::before {
+  line-height: 50px;
+}
+
+.listSong .media-center {
+  display: flex;
+  align-items: center;
+}
+.listSong .media-center .album-infor .name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #777777;
+}
+.listSong .item .media-center .album-infor .name:hover {
+  color: #bc6fe6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.listSong .media-right {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  flex :1;
+  justify-content: end;
+}
+.listSong .media-right .level {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.listSong .media-right .level .duration {
+  font-size: 12px;
+  font-weight: 500;
+  color: #777777;
+  display: block;
+}
+.listSong .item:hover .media-right .level .duration {
+  display: none;
+}
+.listSong__control button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  color: #fff;
+}
+.listSong__control button {
+  background: transparent;
+  width: 142px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 999px;
+  border-color: #fff;
+  border: 1px #fff solid;
+}
+.listSong__control button:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+/* ---------------------- Bảng Xếp Hạng ------------------------ */
+.charts {
+  margin-top: 50px;
+  background: #ccc;
+  background: url("https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.charts p {
+  margin: 0;
+}
+.charts__heading {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  padding: 40px 0 20px 0;
+  cursor: pointer;
+}
+.charts__subheading {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.charts__subheading-title {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.charts__subheading-title:hover {
+  color: #9b4de0;
+}
+.charts__subheading i::before {
+  font-size: 30px;
+  color: #9b4de0;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.charts__tablelist {
+  background: #2f2739;
+  opacity: 0.9;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.charts__tablelist .timer {
+  position: absolute;
+  right: 30px;
+  font-size: 12px;
+  color: rgb(154, 151, 151);
+  font-weight: 500;
+}
+.charts__tablelist_rankNum {
+  font-size: 38px;
+  font-weight: bold;
+  -webkit-text-stroke: 2px #c0bdc6;
+  color: transparent;
+  width: 36px;
+}
+.charts__tablelist li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 24px;
+  height: 80px;
+}
+.charts__tablelist .VN_01:hover,
+.charts__tablelist .VN_02:hover,
+.charts__tablelist .VN_03:hover,
+.charts__tablelist .VN_04:hover,
+.charts__tablelist .VN_05:hover {
+  background: rgba(57, 50, 67, 0.3);
+}
+.charts__tablelist .KPOP_01:hover,
+.charts__tablelist .KPOP_02:hover,
+.charts__tablelist .KPOP_03:hover,
+.charts__tablelist .KPOP_04:hover,
+.charts__tablelist .KPOP_05:hover {
+  background: rgba(57, 50, 67, 0.3);
+}
+.charts__tablelist .USUK_01:hover,
+.charts__tablelist .USUK_02:hover,
+.charts__tablelist .USUK_03:hover,
+.charts__tablelist .USUK_04:hover,
+.charts__tablelist .USUK_05:hover {
+  background: rgba(57, 50, 67, 0.3);
+}
+.charts__tablelist__wrapSongInfo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.charts__tablelist__wrapSongInfo .song-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.charts__tablelist__wrapSongInfo .singer-name {
+  color: rgb(154, 151, 151);
+  font-size: 12px;
+  font-weight: 500;
+}
+.charts__tablelist__wrapSongInfo .singer-name:hover {
+  color: #bc6fe6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.charts__tablelist__icon .icon-01 {
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  margin: 0 22px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  color: #777777;
+  font-size: 60px;
+  font-weight: lighter;
+}
+.charts__tablelist__icon .icon-02 {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  margin: 0 22px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  color: #777777;
+  font-size: 60px;
+  font-weight: lighter;
+}
+.charts__tablelist__icon .icon-03 {
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  margin: 0 22px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  color: #777777;
+  font-size: 60px;
+  font-weight: lighter;
+}
+.charts__tablelist__icon .icon-04 {
+  position: absolute;
+  top: 230px;
+  left: 30px;
+  margin: 0 22px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  color: #777777;
+  font-size: 60px;
+  font-weight: lighter;
+}
+.charts__tablelist__icon .icon-05 {
+  position: absolute;
+  top: 310px;
+  left: 30px;
+  margin: 0 22px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  color: #777777;
+  font-size: 60px;
+  font-weight: lighter;
+}
+.charts__tablelist__wrapSongInfo img {
+  height: 100%;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-left: 30px;
+}
+.icon-song-01 {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 28px;
+  left: 272px;
+  color: rgb(154, 151, 151);
+}
+.icon-song-01 i {
+  display: none;
+  cursor: pointer;
+  margin: 0 9px;
+  font-size: 16px;
+}
+.play-btn-01 {
+  background: #2f2739;
+  opacity: 0.7;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 20px;
+  left: 86px;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+  display: none;
+}
+.play-btn-01 i {
+  position: absolute;
+  left: 18px;
+  line-height: 40px;
+  color: #fff;
+}
+.VN_01:hover .play-btn-01 {
+  display: block;
+}
+.VN_01:hover .timer {
+  display: none;
+}
+.VN_01:hover .icon-song-01 i {
+  display: block;
+}
+.KPOP_01:hover .play-btn-01 {
+  display: block;
+}
+.KPOP_01:hover .timer {
+  display: none;
+}
+.KPOP_01:hover .icon-song-01 i {
+  display: block;
+}
+.USUK_01:hover .play-btn-01 {
+  display: block;
+}
+.USUK_01:hover .timer {
+  display: none;
+}
+.USUK_01:hover .icon-song-01 i {
+  display: block;
+}
+/* --------------------------- Xem tất cả Việt Nam ------------------------  */
+.more:hover {
+  background: transparent;
+}
+.more-song button {
+  position: absolute;
+  top: 412px;
+  left: 100px;
+  color: #fff;
+}
+.more-song button {
+  background: transparent;
+  width: 142px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 999px;
+  border-color: #fff;
+  border: 1px #fff solid;
+}
+.more-song button:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.icon-song-02 {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 114px;
+  left: 271px;
+  color: rgb(154, 151, 151);
+}
+.icon-song-02 i {
+  display: none;
+  cursor: pointer;
+  margin: 0 9px;
+  font-size: 16px;
+}
+.play-btn-02 {
+  background: #2f2739;
+  opacity: 0.7;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 100px;
+  left: 86px;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+  display: none;
+}
+.play-btn-02 i {
+  position: absolute;
+  left: 18px;
+  line-height: 40px;
+  color: #fff;
+}
+.VN_02:hover .play-btn-02 {
+  display: block;
+}
+.VN_02:hover .timer {
+  display: none;
+}
+.VN_02:hover .icon-song-02 i {
+  display: block;
+}
+.KPOP_02:hover .play-btn-02 {
+  display: block;
+}
+.KPOP_02:hover .timer {
+  display: none;
+}
+.KPOP_02:hover .icon-song-02 i {
+  display: block;
+}
+.USUK_02:hover .play-btn-02 {
+  display: block;
+}
+.USUK_02:hover .timer {
+  display: none;
+}
+.USUK_02:hover .icon-song-02 i {
+  display: block;
+}
+.icon-song-03 {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 193px;
+  left: 272px;
+  color: rgb(154, 151, 151);
+}
+.icon-song-03 i {
+  display: none;
+  cursor: pointer;
+  margin: 0 9px;
+  font-size: 16px;
+}
+.play-btn-03 {
+  background: #2f2739;
+  opacity: 0.7;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 180px;
+  left: 86px;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+  display: none;
+}
+.play-btn-03 i {
+  position: absolute;
+  left: 18px;
+  line-height: 40px;
+  color: #fff;
+}
+.VN_03:hover .play-btn-03 {
+  display: block;
+}
+.VN_03:hover .timer {
+  display: none;
+}
+.VN_03:hover .icon-song-03 i {
+  display: block;
+}
+.KPOP_03:hover .play-btn-03 {
+  display: block;
+}
+.KPOP_03:hover .timer {
+  display: none;
+}
+.KPOP_03:hover .icon-song-03 i {
+  display: block;
+}
+.USUK_03:hover .play-btn-03 {
+  display: block;
+}
+.USUK_03:hover .timer {
+  display: none;
+}
+.USUK_03:hover .icon-song-03 i {
+  display: block;
+}
+.icon-song-04 {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 274px;
+  left: 272px;
+  color: rgb(154, 151, 151);
+}
+.icon-song-04 i {
+  display: none;
+  cursor: pointer;
+  margin: 0 9px;
+  font-size: 16px;
+}
+.play-btn-04 {
+  background: #2f2739;
+  opacity: 0.7;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 260px;
+  left: 86px;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+  display: none;
+}
+.play-btn-04 i {
+  position: absolute;
+  left: 18px;
+  line-height: 40px;
+  color: #fff;
+}
+.VN_04:hover .play-btn-04 {
+  display: block;
+}
+.VN_04:hover .timer {
+  display: none;
+}
+.VN_04:hover .icon-song-04 i {
+  display: block;
+}
+.KPOP_04:hover .play-btn-04 {
+  display: block;
+}
+.KPOP_04:hover .timer {
+  display: none;
+}
+.KPOP_04:hover .icon-song-04 i {
+  display: block;
+}
+.USUK_04:hover .play-btn-04 {
+  display: block;
+}
+.USUK_04:hover .timer {
+  display: none;
+}
+.USUK_04:hover .icon-song-04 i {
+  display: block;
+}
+.icon-song-05 {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 354px;
+  left: 272px;
+  color: rgb(154, 151, 151);
+}
+.icon-song-05 i {
+  display: none;
+  cursor: pointer;
+  margin: 0 9px;
+  font-size: 16px;
+}
+.play-btn-05 {
+  background: #2f2739;
+  opacity: 0.7;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 340px;
+  left: 86px;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+  display: none;
+}
+.play-btn-05 i {
+  position: absolute;
+  left: 18px;
+  line-height: 40px;
+  color: #fff;
+}
+.VN_05:hover .play-btn-05 {
+  display: block;
+}
+.VN_05:hover .timer {
+  display: none;
+}
+.VN_05:hover .icon-song-05 i {
+  display: block;
+}
+.KPOP_05:hover .play-btn-05 {
+  display: block;
+}
+.KPOP_05:hover .timer {
+  display: none;
+}
+.KPOP_05:hover .icon-song-05 i {
+  display: block;
+}
+.USUK_05:hover .play-btn-05 {
+  display: block;
+}
+.USUK_05:hover .timer {
+  display: none;
+}
+.USUK_05:hover .icon-song-05 i {
+  display: block;
+}
+
+/* .charts__tablelist__icon_play_btn {
+  background: #2f2739;
+  opacity: 0.7;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  top: 15px;
+  left: 126px;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  display: none;
+} */
