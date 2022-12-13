@@ -228,17 +228,26 @@ body {
   font-size: 14px;
   margin: 10px 0;
   white-space: nowrap;
-  overflow: hidden;
+  
 }
 .card__body-title {
   font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .card__body-title:hover,
 .card__body a:hover {
   color: #c273ed;
+  text-decoration: none;
 }
 .card__body a {
   color: #8b8791;
+}
+
+.card__body-desc{
+  white-space: initial;
 }
 
 

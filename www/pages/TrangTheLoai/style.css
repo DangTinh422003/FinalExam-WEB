@@ -1,6 +1,6 @@
 /* google font */
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital@0;1&family=Poppins:ital,wght@0,400;1,300;1,400&display=swap");
 /* reset css */
 * {
   margin: 0;
@@ -13,10 +13,9 @@ ul {
 }
 
 body {
-  background: #170F23;
-  color :#fff;
+  background: #170f23;
+  color: #fff;
 }
-
 
 .main {
   margin-left: 252px;
@@ -40,9 +39,6 @@ body {
     width: 100%;
   }
 }
-
-
-
 
 /* ------------ sidebar ----------- */
 .sidebar {
@@ -74,15 +70,27 @@ body {
   width: 80%;
   height: 2px;
   background: #ccc;
-  margin : 20px 0;
+  margin: 20px 0;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-} 
+}
 .sidebar__nav li:hover {
   background: #393243;
 }
 .sidebar__nav li:hover::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #9b4de0;
+}
+.sidebar__nav li.active {
+  background: #393243;
+}
+.sidebar__nav li.active::after {
   content: "";
   height: 100%;
   width: 2px;
@@ -108,9 +116,10 @@ body {
   text-decoration: none;
 }
 
-
-
 /* ------------ header ----------- */
+.header {
+  padding-top: 10px;
+}
 .header .container {
   height: 70px;
   display: flex;
@@ -120,28 +129,28 @@ body {
 .header__search {
   display: flex;
   width: 50%;
-  color : #DADADA;
+  color: #dadada;
 }
 .header__search-control {
   margin-right: 20px;
   display: flex;
   align-items: center;
 }
-.header__search-control i{
+.header__search-control i {
   font-size: 20px;
-  color : #585361;
+  color: #585361;
   margin-left: 10px;
   cursor: pointer;
 }
 .header__search-box {
-  background: #2F2739;
+  background: #2f2739;
   width: 100%;
   display: flex;
-  padding : 0 15px;
+  padding: 0 15px;
   border-radius: 20px;
 }
 .header__search-box label {
-  margin : 0;
+  margin: 0;
   margin-right: 10px;
   cursor: pointer;
   display: flex;
@@ -150,19 +159,19 @@ body {
 .header__search-box input {
   border: none;
   outline: none;
-  cursor: auto;
   background: transparent;
-  caret-color : #fff;
-  flex : 1;
-  padding : 10px 0;
+  color: #ccc;
+  caret-color: #fff;
+  flex: 1;
+  padding: 10px 0;
 }
 .header__search-box input::placeholder {
-  color : #DADADA;
+  color: #dadada;
 }
 .header__user i {
-  background: #2F2739;
-  color : #C2C2C2;
-  padding : 10px;
+  background: #2f2739;
+  color: #c2c2c2;
+  padding: 10px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -170,63 +179,102 @@ body {
   margin: 0 5px;
   cursor: pointer;
 }
+.header__user i:hover {
+  background: #fff;
+  color: #170f23;
+}
 .header__user i::before {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.banner_img{
-    display: block;
-    max-width:95%;
-    width: auto;
-    height: auto;
-    margin: auto;
-    object-fit: cover;
-}
-
-.card{
-    border: 0px;
-    border-radius: 8px;
-    margin: 5px;
-}
-
-.card-img-top{
-   border-radius: inherit;
-   position: relative;
+  transform: translate(-50%, -50%);
 }
 
 
-.card:hover{
+
+.banner__img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+.banner__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.activity .row{
+  margin-bottom:10px;
+}
+
+.activity .card__img{
+  margin-bottom:10px;
+}
+
+
+.card {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.card__img {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+}
+.card__img img {
+  object-fit: contain;
+  width: 100%;
+  transform: scale(1);
+  transition: all 0.4s ease-in-out;
+}
+.card__img:hover img {
   transform: scale(1.1);
 }
-
-.cate_item{
-  max-width: min-content;
+.card__body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 10px 0;
+  white-space: nowrap;
+  
 }
-
-.cate_link{
-  color:azure;
-  font-weight: 600;
+.card__body-title {
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
-.cate_link:hover, .singer_info:hover{
-  color:#9b4de0;
+.card__body-title:hover,
+.card__body a:hover {
+  color: #c273ed;
   text-decoration: none;
-
+}
+.card__body a {
+  color: #8b8791;
 }
 
-.singer_info{
-  color:gray;
-  font-size: small;
+.card__body-desc{
+  white-space: initial;
 }
 
 
+/* ------------------------- */
+.heading {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
 
 
-
-
+.r_b .row, 
+.ost .row, 
+.instrumental_music .row, 
+.jazz .row,
+.latin .row,
+.acoustic .row{
+  justify-content: space-between;
+}
 
 
 
