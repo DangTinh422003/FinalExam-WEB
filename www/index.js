@@ -115,7 +115,8 @@ function handleCickOnListSong() {
     currentSongId = +this.dataset.songid;
     if (this.querySelector("i").classList.contains("fa-play")) {
       await callApiChangeInfo(currentSongId);
-      [...$(".listSong_list-item i")].forEach((item) => {
+      [...$(".listSong__list-item .play-btn i")].forEach((item,index) => {
+        console.log(item);
         item.classList.replace("fa-pause", "fa-play");
       });
       this.querySelector("i").classList.replace("fa-play", "fa-pause");
