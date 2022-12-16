@@ -55,24 +55,12 @@
               </a>
             </li>
             <li>
-              <a href="">
-                <i class="sidebar__icon fa-solid fa-radio"></i>
-                <span>Radio</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
+              <a href="./pages/TrangTheoDoi/index.html">
                 <i class="sidebar__icon fa-regular fa-rectangle-list"></i>
                 <span>Theo Dõi</span>
               </a>
             </li>
             <li class="underline"></li>
-            <li>
-              <a href="">
-                <i class="sidebar__icon fa-solid fa-music"></i>
-                <span>Nhạc Mới</span>
-              </a>
-            </li>
             <li>
               <a href="./pages/TrangTheLoai/index.html">
                 <i class="sidebar__icon fa-brands fa-squarespace"></i>
@@ -636,7 +624,7 @@
               <!-- song control menu -->
               <div class="songControl-menu">
                 <!-- <audio src="http://localhost:8080/music/LacTroiTripleDRemix-SonTungMTP-5164670.mp3"></audio> -->
-                <audio src=""></audio>
+                <audio src="http://localhost:8080/music/LacTroiTripleDRemix-SonTungMTP-5164670.mp3"></audio>
                 <i class="fad fa-random random-btn"></i>
                 <i class="fas fa-step-backward prev-btn"></i>
                 <i class="fa-sharp fa-solid fa-play play-btn"></i>
@@ -657,11 +645,15 @@
           <!-- song Menu -->
           <div class="col-3 d-lg-flex d-none">
             <div class="songMenu">
-              <i class="far fa-signal-stream"></i>
-              <i class="fas fa-microphone-stand"></i>
+              <a style="color : #fff"
+                href="http://localhost:8080/music/LacTroiTripleDRemix-SonTungMTP-5164670.mp3"
+                controls="download"
+                aria-label="download song"
+                class="downloadMusic">
+                <i class="fad fa-download"></i>
+              </a>
               <i class="fas fa-volume-up volume-btn"></i>
-              <i class="far fa-window-restore"></i>
-              <a href="#listSong"><i class="far fa-line-height"></i></a>
+              <a style="color : #fff" href="#listSong"><i class="far fa-line-height"></i></a>
             </div>
           </div>
         </div>

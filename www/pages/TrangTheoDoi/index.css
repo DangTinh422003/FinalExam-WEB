@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lato:ital@0;1&family=Poppins:ital,wght@0,400;1,300;1,400&display=swap");
+
+/* ---------------------- artist navbar ------------------------ */
+.artist-navbar {
+  padding-top: 32px;
+  margin-bottom: 48px;
+}
+.artist-navbar-container {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+}
+.artist-navbar-container .artist-navbar-menu {
+  font-weight: 400;
+  margin: 0 auto;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  padding: 3px;
+  border-radius: 16px;
+}
+.artist-navbar-menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 500;
+}
+.artist-navbar-wrap
+  .artist-navbar-container
+  .artist-navbar-menu
+  .artist-navbar-item.is-active {
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 7%);
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+.artist-navbar-wrap
+  .artist-navbar-container
+  .artist-navbar-menu
+  .artist-navbar-item {
+  padding: 0;
+  font-size: 12;
+  line-height: 1;
+  min-width: 120px;
+  margin: 0;
+  justify-content: center;
+  text-transform: uppercase;
+  position: relative;
+}
+.artist-navbar-wrap
+  .artist-navbar-container
+  .artist-navbar-menu
+  .artist-navbar-item
+  a {
+  display: block;
+  padding: 7px 25px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #dadada;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 500;
+}
+/* ----------------------------- carousel --------------------------------------  */
+.zm-choice .title {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 50px;
+  color: #e934ff;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.carousel__list .row {
+  display: flex;
+  justify-content: center;
+}
+.carousel {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+.carousel__item img {
+  height: auto;
+  width: 90%;
+}
+/* ------------------------------ news -------------------------------- */
+.heading .heading_news {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 30px;
+  color: pink;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+.heading .heading_news_feel {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 30px;
+}
+.grid {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 2000px;
+  max-height: 2000px;
+}
+.grid-item {
+  width: 384px;
+  position: absolute;
+  writing-mode: horizontal-tb;
+  top: 0px;
+  left: 30px;
+}
+.grid-item-03 {
+  width: 384px;
+  position: absolute;
+  writing-mode: horizontal-tb;
+  top: 0px;
+  left: 850px;
+}
+.grid-item-02 {
+  top: 0px;
+  left: 440px;
+  width: 384px;
+  writing-mode: horizontal-tb;
+  position: absolute;
+}
+.grid-item-04 {
+  width: 384px;
+  position: absolute;
+  writing-mode: horizontal-tb;
+  top: 660px;
+  left: 30px;
+}
+.grid-item-05 {
+  top: 720px;
+  left: 440px;
+  width: 384px;
+  writing-mode: horizontal-tb;
+  position: absolute;
+}
+.grid-item-06 {
+  width: 384px;
+  position: absolute;
+  writing-mode: horizontal-tb;
+  top: 660px;
+  left: 850px;
+}
+.grid-item-07 {
+  width: 384px;
+  position: absolute;
+  writing-mode: horizontal-tb;
+  top: 1355px;
+  left: 30px;
+}
+.grid-item-08 {
+  top: 1220px;
+  left: 440px;
+  width: 384px;
+  writing-mode: horizontal-tb;
+  position: absolute;
+}
+.grid-item-09 {
+  width: 384px;
+  position: absolute;
+  writing-mode: horizontal-tb;
+  top: 1212px;
+  left: 850px;
+}
+.zm-card-01 {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgba(66, 66, 66, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.card-header {
+  border-bottom: none;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+.card-header .media .media-left img {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.4s ease-in-out;
+  object-fit: contain;
+}
+.media-content {
+  text-align: left;
+}
+.card-header .media-content .singer-name {
+  display: flex;
+  margin: 5px 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.card-header .media-content .singer-name .singer {
+  padding-left: 8px;
+  cursor: pointer;
+}
+.card-header .media-content .singer-name .singer:hover {
+  color: #c273ed;
+}
+.card-header .media-content .singer-name .infor {
+  padding-left: 10px;
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+.card-header .media-content .singer-name .infor1 {
+  padding-left: 7px;
+  padding-bottom: 7px;
+  color: #c273ed;
+  font-weight: 500;
+}
+.zm-card-01 .card-header .media-content .datetime .timer {
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  top: 47px;
+  left: 80px;
+  cursor: pointer;
+  color: rgb(161, 158, 158);
+}
+.card-header .status {
+  padding-top: 3px;
+  font-size: 15px;
+}
+.card-content img {
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+.like-comment {
+  display: flex;
+  align-items: center;
+}
+.like {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.like i {
+  font-size: 15px;
+  margin-right: 5px;
+  margin-top: 10px;
+  line-height: normal;
+}
+.like .number {
+  margin-bottom: 0;
+  padding-top: 10px;
+  line-height: normal;
+  font-size: 15px;
+  margin-left: 3px;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+.comment i {
+  font-size: 15px;
+  line-height: normal;
+}
+.comment .number {
+  margin-bottom: 0;
+  line-height: normal;
+  font-size: 15px;
+  margin-top: 0;
+  margin-left: 7px;
+}
+.zm-card-02 {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgba(66, 66, 66, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.zm-card-02 .card-header .media-content .datetime .timer {
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  top: 47px;
+  left: 83px;
+  cursor: pointer;
+  color: rgb(161, 158, 158);
+}
+.zm-card-03 {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgba(66, 66, 66, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.zm-card-03 .card-header .media-content .datetime .timer {
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  top: 47px;
+  left: 83px;
+  cursor: pointer;
+  color: rgb(161, 158, 158);
+}
+.zm-card-04 {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgba(66, 66, 66, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.1);
+  width: 384px;
+}
+.zm-card-04 .card-header .media-content .datetime .timer {
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  position: absolute;
+  top: 47px;
+  left: 83px;
+  color: rgb(161, 158, 158);
+}
+.zm-card-05 {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgba(66, 66, 66, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.1);
+  width: 384px;
+}
+.zm-card-05 .card-header .media-content .datetime .timer {
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  position: absolute;
+  top: 47px;
+  left: 83px;
+  color: rgb(161, 158, 158);
+}
+.zm-card-06 {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgba(66, 66, 66, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.1);
+  width: 384px;
+}
+.zm-card-06 .card-header .media-content .datetime .timer {
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  position: absolute;
+  top: 47px;
+  left: 83px;
+  color: rgb(161, 158, 158);
+}
+.zm-card-07 {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgba(66, 66, 66, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.1);
+  width: 384px;
+}
+.zm-card-07 .card-header .media-content .datetime .timer {
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  position: absolute;
+  top: 47px;
+  left: 83px;
+  color: rgb(161, 158, 158);
+}
+.zm-card-08 {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgba(66, 66, 66, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.1);
+  width: 384px;
+}
+.zm-card-08 .card-header .media-content .datetime .timer {
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  position: absolute;
+  top: 47px;
+  left: 83px;
+  color: rgb(161, 158, 158);
+}
+.zm-card-09 {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px 0 rgba(66, 66, 66, 0.4);
+  background-color: hsla(0, 0%, 100%, 0.1);
+  width: 384px;
+}
+.zm-card-09 .card-header .media-content .datetime .timer {
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  position: absolute;
+  top: 47px;
+  left: 83px;
+  color: rgb(161, 158, 158);
+}
+/* ---------------------- contact ------------------ */
+.contact {
+    padding-bottom: 150px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 8px;
+    position: absolute;
+    left: 390px;
+}
+.contact__form {
+  background: #332075;
+  flex: 1;
+  padding: 50px 60px;
+}
+.contact__form-title {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 50px;
+  color: #e934ff;
+  margin: 0;
+  text-align: center;
+}
+.contact__form-decs {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  resize: none;
+  padding: 10px 20px;
+  padding-left: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px #474061 solid;
+  color: #fff;
+}
+.contact__form textarea {
+  margin-top: 20px;
+  height: 100px;
+}
+.contact__form button {
+  padding: 10px 30px;
+  margin-top: 30px;
+  background-image: linear-gradient(to right top, #6839d2, #b7acba);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+.contact__form button:hover {
+  opacity: 0.8;
+}
+.thumbnail img {
+    width: 390px;
+    height: 544px;
+}

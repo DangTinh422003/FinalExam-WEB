@@ -47,10 +47,6 @@ path {
 }
 
 /* ----------------------------- list Song -------------------------------- */
-.listSong .col {
-}
-.listSong__list-item {
-}
 .listSong .item {
   overflow: hidden;
   display: flex;
@@ -162,10 +158,10 @@ path {
   background: #2f2739;
   opacity: 0.7;
   width: 60px;
-  height: 60px;
+  height: 61px;
   position: absolute;
-  top: 15px;
-  left: 147px;
+  top: 9px;
+  left: 112px;
   text-align: center;
   justify-content: center;
   font-size: 18px;
@@ -261,6 +257,7 @@ path {
   background: url("https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 130px;
 }
 .charts p {
   margin: 0;
@@ -294,6 +291,10 @@ path {
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
+}
+.charts__tablelist__wrapSongInfo img {
+  width: 40px;
+  height: 40px;
 }
 .charts__tablelist {
   background: #2f2739;
@@ -755,16 +756,3 @@ path {
   display: block;
 }
 
-/* .charts__tablelist__icon_play_btn {
-  background: #2f2739;
-  opacity: 0.7;
-  width: 52px;
-  height: 52px;
-  position: absolute;
-  top: 15px;
-  left: 126px;
-  text-align: center;
-  justify-content: center;
-  font-size: 18px;
-  display: none;
-} */
