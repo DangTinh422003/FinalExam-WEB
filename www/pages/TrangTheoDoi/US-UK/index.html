@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
       href="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.8.1/static/media/icon_zing_mp3_60.f6b51045.svg" />
@@ -18,592 +18,583 @@
     <link rel="stylesheet" href="./index.css" />
     <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
     <title>Nghệ sĩ | Xem bài hát, album, MV đang hot nhất hiện tại</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="root">
-        <div class="row no-gutters">
-            <!-- sidebar -->
-            <div class="sidebar">
-              <!-- logo -->
-              <div class="sidebar__logo">
-                <a href="./index.html">
-                  <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt="logo" />
-                  <img
-                    src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.8.1/static/media/icon_zing_mp3_60.f6b51045.svg"
-                    class="d-none"
-                    alt="logo" />
-                </a>
-              </div>
-              <!-- nav -->
-              <ul class="sidebar__nav">
-                <li>
-                  <a href="">
-                    <i class="sidebar__icon fa-solid fa-list-ul"></i>
-                    <span>Cá Nhân</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="../../index.html">
-                    <i class="sidebar__icon fa-solid fa-headphones-simple"></i>
-                    <span>khám Phá</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="./index.html">
-                    <i class="sidebar__icon fa-solid fa-chart-line"></i>
-                    <span>#zingchart</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <i class="sidebar__icon fa-solid fa-radio"></i>
-                    <span>Radio</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <i class="sidebar__icon fa-regular fa-rectangle-list"></i>
-                    <span>Theo Dõi</span>
-                  </a>
-                </li>
-                <li class="underline"></li>
-                <li>
-                  <a href="">
-                    <i class="sidebar__icon fa-solid fa-music"></i>
-                    <span>Nhạc Mới</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="../TrangTheLoai/index.html">
-                    <i class="sidebar__icon fa-brands fa-squarespace"></i>
-                    <span>Thể Loại</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="../TrangTop100/index.html">
-                    <i class="sidebar__icon fa-regular fa-star"></i>
-                    <span>Top 100</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="../TrangMV/index.html">
-                    <i class="sidebar__icon fa-solid fa-clapperboard"></i>
-                    <span>MV</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+      <div class="row no-gutters">
+        <!-- sidebar -->
+        <div class="sidebar">
+          <!-- logo -->
+          <div class="sidebar__logo">
+            <a href="./index.html">
+              <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt="logo" />
+              <img
+                src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.8.1/static/media/icon_zing_mp3_60.f6b51045.svg"
+                class="d-none"
+                alt="logo" />
+            </a>
+          </div>
+          <!-- nav -->
+          <ul class="sidebar__nav">
+            <li>
+              <a href="../../TrangCaNhan/index.html">
+                <i class="sidebar__icon fa-solid fa-list-ul"></i>
+                <span>Cá Nhân</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../../index.html">
+                <i class="sidebar__icon fa-solid fa-headphones-simple"></i>
+                <span>khám Phá</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../TrangZingChart/index.html">
+                <i class="sidebar__icon fa-solid fa-chart-line"></i>
+                <span>#zingchart</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../TrangTheoDoi/index.html">
+                <i class="sidebar__icon fa-regular fa-rectangle-list"></i>
+                <span>Theo Dõi</span>
+              </a>
+            </li>
+            <li class="underline"></li>
+            <li>
+              <a href="../../TrangTheLoai/index.html">
+                <i class="sidebar__icon fa-brands fa-squarespace"></i>
+                <span>Thể Loại</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../TrangTop100/index.html">
+                <i class="sidebar__icon fa-regular fa-star"></i>
+                <span>Top 100</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../TrangMV/index.html">
+                <i class="sidebar__icon fa-solid fa-clapperboard"></i>
+                <span>MV</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="main">
-            <div class="container">
-                <header class="header">
-                    <div class="container justify-content-between justify-content-end">
-                      <div class="header__search d-md-flex d-none">
-                        <div class="header__search-control">
-                          <i class="fa-solid fa-arrow-left"></i>
-                          <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                        <div class="header__search-box d-md-flex d-none">
-                          <label for="header-search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                          <input id="header-search" type="text" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát..." />
-                        </div>
-                      </div>
-                      <div class="header__user">
-                        <i class="fa-solid fa-shirt"></i>
-                        <i class="fa-solid fa-gem"></i>
-                        <i class="fa-solid fa-upload"></i>
-                        <i class="fa-solid fa-gears"></i>
-                        <i class="fa-solid fa-user"></i>
-                      </div>
-                    </div>
-                  </header>
+      </div>
+      <div class="main">
+        <div class="container">
+          <header class="header">
+            <div class="container justify-content-between justify-content-end">
+              <div class="header__search d-md-flex d-none">
+                <div class="header__search-control">
+                  <i class="fa-solid fa-arrow-left"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="header__search-box d-md-flex d-none">
+                  <label for="header-search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                  <input id="header-search" type="text" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát..." />
+                </div>
+              </div>
+              <div class="header__user">
+                <i class="fa-solid fa-shirt"></i>
+                <i class="fa-solid fa-gem"></i>
+                <i class="fa-solid fa-upload"></i>
+                <i class="fa-solid fa-gears"></i>
+                <i class="fa-solid fa-user"></i>
+              </div>
             </div>
-            <!-- ----------------------------- content: -------------------------->
-            <div class="content">
-                <div class="artist-navbar                 </div>">
-                   <nav class="artist-navbar-wrap">
-                        <div class="artist-navbar-container">
-                            <ul class="artist-navbar-menu">
-                                <li class="artist-navbar-item">
-                                    <div class="artist-navbar-link">
-                                        <a href="../index.html">Việt Nam</a>
-                                    </div>
-                                </li>
-                                <li class="artist-navbar-item is-active">
-                                    <div class="artist-navbar-link">
-                                        <a href="./US-UK/index.html">US-UK</a>
-                                    </div>
-                                </li>
-                                <li class="artist-navbar-item">
-                                    <div class="artist-navbar-link">
-                                        <a href="../K-POP/index.html">K-POP</a>
-                                    </div>
-                                </li>
-                                <li class="artist-navbar-item">
-                                    <div class="artist-navbar-link">
-                                        <a href="">Hoa Ngữ</a>
-                                    </div>
-                                </li>
-                                <li class="artist-navbar-item">
-                                    <div class="artist-navbar-link">
-                                        <a href="">Nổi bật</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                   </nav>
-                </div>
-                <div>
-                    <!-- carousel and zing choice -->
-                    <div class="carousel">
-                        <div class="container">
-                            <div class="carousel__list">
-                                <div class="zm-choice">
-                                    <h2 class="title">Best Choice Award US-UK Of MP3</h2>
-                                </div>
-                                <div class="row">
-                                    <div class="carousel__item">
-                                        <img src="./image/alan-walker.png" alt=""/>
-                                    </div>
-                                    <div class="carousel__item">
-                                        <img src="./image/justin-bieber.png" alt=""/>
-                                    </div>
-                                    <div class="carousel__item">
-                                        <img src="./image/charlie-puth.png" alt=""/>
-                                    </div>
-                                    <div class="carousel__item">
-                                        <img src="./image/katy-perry.png" alt=""/>
-                                    </div>
-                                    <div class="carousel__item">
-                                        <img src="./image/the-chainsmoker.png" alt="Ca Sĩ Hương Ly"/>
-                                    </div>
-                                    <div class="carousel__item">
-                                        <img src="./image/mike-perry.png" alt="Ca Sĩ Jack"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+          </header>
+        </div>
+        <!-- ----------------------------- content: -------------------------->
+        <div class="content">
+          <div class="artist-navbar">
+            <nav class="artist-navbar-wrap">
+              <div class="artist-navbar-container">
+                <ul class="artist-navbar-menu">
+                  <li class="artist-navbar-item">
+                    <div class="artist-navbar-link">
+                      <a href="../index.html">Việt Nam</a>
                     </div>
-                    <!-- end carousel and zing choice-->
-                </div>
-            </div>
-                <!-- ------------------------ news -------------------- -->
-            <div class="news">
-                <div class="container">
-                    <div class="heading">
-                        <h3 class="heading_news">Feeling And Activity</h3>
-                        <p class="heading_news_feel">How are you today ?</p>
+                  </li>
+                  <li class="artist-navbar-item is-active">
+                    <div class="artist-navbar-link">
+                      <a href="./US-UK/index.html">US-UK</a>
                     </div>
-                </div>
-                <!-- ------------------------------------- bảng tin --------------------------- -->
-                <div class="grid">
-                    <div class="grid-item">
-                        <div class="zm-card-01">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./image/olly-murs.png" alt="">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="singer-name">
-                                            <p class="singer">Olly Murs</p>
-                                            <span class="infor">  •  </span>
-                                            <p class="infor1">Follow</p>
-                                        </div>
-                                        <div class="datetime">
-                                            <p class="timer">16th December at 14:14</p>
-                                        </div>
-                                    </div>
-                                </div>      
-                            </div>
-                            <div class="status">This was amazing! 🧡
-                                Listen to Olly Murs full Piano Room now on @bbcsounds</div>
-                            <div class="card-content">
-                                <img src="./image/img1.png" alt="">
-                            </div>
-                            <div class="like-comment">
-                                <div class="like">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="number">13,584</p>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p class="number">486</p>
-                                </div>
-                            </div>
-                        </div>
+                  </li>
+                  <li class="artist-navbar-item">
+                    <div class="artist-navbar-link">
+                      <a href="../K-POP/index.html">K-POP</a>
                     </div>
-                    <div class="grid-item-02">
-                        <div class="zm-card-02">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./image/kesha.png" alt="">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="singer-name">
-                                            <p class="singer">Kesha</p>
-                                            <span class="infor">  •  </span>
-                                            <p class="infor1">Follow</p>
-                                        </div>
-                                        <div class="datetime">
-                                            <p class="timer">23th November at 14:14</p>
-                                        </div>
-                                    </div>      
-                                </div>
-                                <div class="status">10 years since die young! So wild. God the stories I wish I could tell u, animals. One day…</div>
-                            </div>
-                            <div class="card-content">
-                                <img src="./image/img2.png" alt="">
-                            </div>
-                            <div class="like-comment">
-                                <div class="like">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="number">4,328</p>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p class="number">230</p>
-                                </div>
-                            </div>
-                        </div>
+                  </li>
+                  <li class="artist-navbar-item">
+                    <div class="artist-navbar-link">
+                      <a href="">Hoa Ngữ</a>
                     </div>
-                    <div class="grid-item-03">
-                        <div class="zm-card-03">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./image/alan-walker-1.png" alt="">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="singer-name">
-                                            <p class="singer">Alan Walker</p>
-                                            <span class="infor">  •  </span>
-                                            <p class="infor1">Follow</p>
-                                        </div>
-                                        <div class="datetime">
-                                            <p class="timer">Yesterday at 20:13</p>
-                                        </div>
-                                    </div>      
-                                </div>
-                                <div class="status">Music is my escape 🎶
-                                    #rogxalanwalker</div>
-                            </div>
-                            <div class="card-content">
-                                <img src="./image/img3.png" alt="">
-                            </div>
-                            <div class="like-comment">
-                                <div class="like">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="number">22,307</p>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p class="number">1,604</p>
-                                </div>
-                            </div>
-                        </div>
+                  </li>
+                  <li class="artist-navbar-item">
+                    <div class="artist-navbar-link">
+                      <a href="">Nổi bật</a>
                     </div>
-                    <div class="grid-item-04">
-                        <div class="zm-card-04">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./image/charlie-puth-1.png" alt="">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="singer-name">
-                                            <p class="singer">Charlie Puth</p>
-                                            <span class="infor">  •  </span>
-                                            <p class="infor1">Follow</p>
-                                        </div>
-                                        <div class="datetime">
-                                            <p class="timer">2nd December lúc 19:00</p>
-                                        </div>
-                                    </div>      
-                                </div>
-                                <div class="status">Ohhhhh I'm NOT a loser…'cause I didn't lose her!!! 🎶 (Happy birthday to me.)</div>
-                            </div>
-                            <div class="card-content">
-                                <img src="./image/img4.png" alt="">
-                            </div>
-                            <div class="like-comment">
-                                <div class="like">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="number">11,032</p>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p class="number">1245</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item-05">
-                        <div class="zm-card-05">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./image/martin-garrix.png" alt="">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="singer-name">
-                                            <p class="singer">Martin Garrix</p>
-                                            <span class="infor">  •  </span>
-                                            <p class="infor1">Follow</p>
-                                        </div>
-                                        <div class="datetime">
-                                            <p class="timer">4 days ago at 21:00</p>
-                                        </div>
-                                    </div>      
-                                </div>
-                                <div class="status">Djakarta WOWOWOW that was so fun! terima kasih ❤️</div>
-                            </div>
-                            <div class="card-content">
-                                <img src="./image/img6.png" alt="">
-                            </div>
-                            <div class="like-comment">
-                                <div class="like">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="number">12,285</p>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p class="number">5,435</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item-06">
-                        <div class="zm-card-06">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./image/dj-snake.png" alt="">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="singer-name">
-                                            <p class="singer">DJ Snake</p>
-                                            <span class="infor">  •  </span>
-                                            <p class="infor1">Follow</p>
-                                        </div>
-                                        <div class="datetime">
-                                            <p class="timer">30th November at 03:00</p>
-                                        </div>
-                                    </div>      
-                                </div>
-                                <div class="status">hank you India 🇮🇳 for welcoming me back with open arms after 3 years! As always the love and passion here is on another level. I can't believe we did 100,000 Tickets for this solo Indian tour. MADNESS!
-                                    India I'll be back soon. ♥️🇮🇳
-                                    
-                                    Love,
-                                    William</div>
-                            </div>
-                            <div class="card-content">
-                                <img src="./image/img7.png" alt="">
-                            </div>
-                            <div class="like-comment">
-                                <div class="like">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="number">242,285</p>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p class="number">5,241</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item-07">
-                        <div class="zm-card-07">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./image/cold-play.png" alt="">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="singer-name">
-                                            <p class="singer">Cold Play</p>
-                                            <span class="infor">  •  </span>
-                                            <p class="infor1">Follow</p>
-                                        </div>
-                                        <div class="datetime">
-                                            <p class="timer">6th December 1:00</p>
-                                        </div>
-                                    </div>      
-                                </div>
-                                <div class="status"></div>
-                            </div>
-                            <div class="card-content">
-                                <img src="./image/img8.png" alt="">
-                            </div>
-                            <div class="like-comment">
-                                <div class="like">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="number">15,800</p>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p class="number">3,412</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item-08">
-                        <div class="zm-card-08">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./image/ariana-grande.png" alt="">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="singer-name">
-                                            <p class="singer">Ariana Grande</p>
-                                            <span class="infor">  •  </span>
-                                            <p class="infor1">Follow</p>
-                                        </div>
-                                        <div class="datetime">
-                                            <p class="timer">1st December at 9:30</p>
-                                        </div>
-                                    </div>      
-                                </div>
-                                <div class="status">mod vanilla & mod blush out now on ultabeauty.com @ultabeauty
-                                    🤎</div>
-                            </div>
-                            <div class="card-content">
-                                <img src="./image/img9.png" alt="">
-                            </div>
-                            <div class="like-comment">
-                                <div class="like">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="number">531,500</p>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p class="number">12,005</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item-09">
-                        <div class="zm-card-09">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./image/olivia.png" alt="">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="singer-name">
-                                            <p class="singer">Olivia Rodrigo</p>
-                                            <span class="infor">  •  </span>
-                                            <p class="infor1">Follow</p>
-                                        </div>
-                                        <div class="datetime">
-                                            <p class="timer">7th November at 19:30</p>
-                                        </div>
-                                    </div>      
-                                </div>
-                                <div class="status">feeling insanelyyyyyy lucky and honored to have helped induct the magnificent Carly Simon into the rock n roll hall of fame last night. being in a room with some of the greatest songwriters of all time was something I'll never ever forget. congrats Carly ily!!!! 🖤🖤🖤 @rockhall</div>
-                            </div>
-                            <div class="card-content">
-                                <img src="./image/img10.png" alt="">
-                            </div>
-                            <div class="like-comment">
-                                <div class="like">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="number">632,000</p>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                    <p class="number">3,504</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- -------------------------------------------- end bảng tin ------------------ -->
-            <!-- contact -->
-            <div class="contact">
-                <div class="container">
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div>
+            <!-- carousel and zing choice -->
+            <div class="carousel">
+              <div class="container">
+                <div class="carousel__list">
+                  <div class="zm-choice">
+                    <h2 class="title">Best Choice Award US-UK Of MP3</h2>
+                  </div>
                   <div class="row">
-                    <div class="contact__form col-lg-6 col-12">
-                      <h3 class="contact__form-title">Vote for Zing Music Award 2022</h3>
-                      <p class="contact__form-decs">About yourself?</p>
-                      <div class="row">
-                        <div class="col-12 col-md-6"><input type="text" placeholder="Name" /></div>
-                        <div class="col-12 col-md-6"><input type="email" placeholder="Email" /></div>
-                        <div class="col-12"><textarea placeholder="Name of your favourite singer"></textarea></div>
-                      </div>
-                      <button type="button">VOTE FOR YOUR FAVOURITE SINGER</button>
+                    <div class="carousel__item">
+                      <img src="./image/alan-walker.png" alt="" />
                     </div>
-                    <div class="thumbnail col-6 d-lg-block d-none">
-                      <img src="./image/music-award.webp" alt="" />
+                    <div class="carousel__item">
+                      <img src="./image/justin-bieber.png" alt="" />
+                    </div>
+                    <div class="carousel__item">
+                      <img src="./image/charlie-puth.png" alt="" />
+                    </div>
+                    <div class="carousel__item">
+                      <img src="./image/katy-perry.png" alt="" />
+                    </div>
+                    <div class="carousel__item">
+                      <img src="./image/the-chainsmoker.png" alt="Ca Sĩ Hương Ly" />
+                    </div>
+                    <div class="carousel__item">
+                      <img src="./image/mike-perry.png" alt="Ca Sĩ Jack" />
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- end contact -->
-        </div>
-        <!----------------------------------------footer play music----------------------------------- -->
-        <footer class="footer">
-            <div class="row justify-content-center">
-                <!-- song info -->
-                <div class="col-lg-3 col-sm-4 d-sm-flex d-none">
-                    <div class="songInfo">
-                        <div class="songInfo-img">
-                            <img src="./image/dusk-till-dawn.jfif" alt="" />
-                        </div>
-                        <div class="songInfo-detail">
-                            <p class="songname">Dusk Till Dawn</p>
-                            <p class="singer-name">Zayn ft Sia</p>
-                        </div>
-                        <div class="songInfo-more">
-                            <div class="icon">
-                                <i class="fas fa-heart heart"></i>
-                                <i class="fal fa-ellipsis-h-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--song control --->
-                <div class="col-lg-6 col-sm-8 col-12">
-                    <div class="songControl">
-                        <!-- song control menu -->
-                        <div class="songControl-menu">
-                            <audio src="./music/Y2meta.app - ZAYN & Sia - Dusk Till Dawn (Lyrics) (320 kbps).mp3"></audio>
-                            <i class="fad fa-random random-btn"></i>
-                            <i class="fas fa-step-backward prev-btn"></i>
-                            <i class="fa-sharp fa-solid fa-play play-btn"></i>
-                            <i class="fas fa-step-forward next-btn"></i>
-                            <i class="fad fa-repeat repeat-btn"></i>
-                        </div>
-                        <!-- song control process -->
-                        <div class="songControl-process">
-                            <span class="time-start">00:00</span>
-                            <div class="songControl-processbar">
-                                <p class="songControl-processbar-line"></p>
-                            </div>
-                            <span class="time-end">3:40</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- song Menu -->
-                <div class="col-3 d-lg-flex d-none">
-                    <div class="songMenu">
-                        <i class="far fa-signal-stream"></i>
-                        <i class="fas fa-microphone-stand"></i>
-                        <i class="fas fa-volume-up volume-btn"></i>
-                        <i class="far fa-window-restore"></i>
-                        <a href="#listSong"><i class="far fa-line-height"></i></a>
-                    </div>
-                </div>
             </div>
-            <!--end row-->
-        </footer>
+            <!-- end carousel and zing choice-->
+          </div>
+        </div>
+        <!-- ------------------------ news -------------------- -->
+        <div class="news">
+          <div class="container">
+            <div class="heading">
+              <h3 class="heading_news">Feeling And Activity</h3>
+              <p class="heading_news_feel">How are you today ?</p>
+            </div>
+          </div>
+          <!-- ------------------------------------- bảng tin --------------------------- -->
+          <div class="grid">
+            <div class="grid-item">
+              <div class="zm-card-01">
+                <div class="card-header">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="./image/olly-murs.png" alt="" />
+                    </div>
+                    <div class="media-content">
+                      <div class="singer-name">
+                        <p class="singer">Olly Murs</p>
+                        <span class="infor"> • </span>
+                        <p class="infor1">Follow</p>
+                      </div>
+                      <div class="datetime">
+                        <p class="timer">16th December at 14:14</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="status">This was amazing! 🧡 Listen to Olly Murs full Piano Room now on @bbcsounds</div>
+                <div class="card-content">
+                  <img src="./image/img1.png" alt="" />
+                </div>
+                <div class="like-comment">
+                  <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="number">13,584</p>
+                  </div>
+                  <div class="comment">
+                    <i class="fa-regular fa-comment"></i>
+                    <p class="number">486</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item-02">
+              <div class="zm-card-02">
+                <div class="card-header">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="./image/kesha.png" alt="" />
+                    </div>
+                    <div class="media-content">
+                      <div class="singer-name">
+                        <p class="singer">Kesha</p>
+                        <span class="infor"> • </span>
+                        <p class="infor1">Follow</p>
+                      </div>
+                      <div class="datetime">
+                        <p class="timer">23th November at 14:14</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="status">
+                    10 years since die young! So wild. God the stories I wish I could tell u, animals. One day…
+                  </div>
+                </div>
+                <div class="card-content">
+                  <img src="./image/img2.png" alt="" />
+                </div>
+                <div class="like-comment">
+                  <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="number">4,328</p>
+                  </div>
+                  <div class="comment">
+                    <i class="fa-regular fa-comment"></i>
+                    <p class="number">230</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item-03">
+              <div class="zm-card-03">
+                <div class="card-header">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="./image/alan-walker-1.png" alt="" />
+                    </div>
+                    <div class="media-content">
+                      <div class="singer-name">
+                        <p class="singer">Alan Walker</p>
+                        <span class="infor"> • </span>
+                        <p class="infor1">Follow</p>
+                      </div>
+                      <div class="datetime">
+                        <p class="timer">Yesterday at 20:13</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="status">Music is my escape 🎶 #rogxalanwalker</div>
+                </div>
+                <div class="card-content">
+                  <img src="./image/img3.png" alt="" />
+                </div>
+                <div class="like-comment">
+                  <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="number">22,307</p>
+                  </div>
+                  <div class="comment">
+                    <i class="fa-regular fa-comment"></i>
+                    <p class="number">1,604</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item-04">
+              <div class="zm-card-04">
+                <div class="card-header">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="./image/charlie-puth-1.png" alt="" />
+                    </div>
+                    <div class="media-content">
+                      <div class="singer-name">
+                        <p class="singer">Charlie Puth</p>
+                        <span class="infor"> • </span>
+                        <p class="infor1">Follow</p>
+                      </div>
+                      <div class="datetime">
+                        <p class="timer">2nd December lúc 19:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="status">
+                    Ohhhhh I'm NOT a loser…'cause I didn't lose her!!! 🎶 (Happy birthday to me.)
+                  </div>
+                </div>
+                <div class="card-content">
+                  <img src="./image/img4.png" alt="" />
+                </div>
+                <div class="like-comment">
+                  <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="number">11,032</p>
+                  </div>
+                  <div class="comment">
+                    <i class="fa-regular fa-comment"></i>
+                    <p class="number">1245</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item-05">
+              <div class="zm-card-05">
+                <div class="card-header">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="./image/martin-garrix.png" alt="" />
+                    </div>
+                    <div class="media-content">
+                      <div class="singer-name">
+                        <p class="singer">Martin Garrix</p>
+                        <span class="infor"> • </span>
+                        <p class="infor1">Follow</p>
+                      </div>
+                      <div class="datetime">
+                        <p class="timer">4 days ago at 21:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="status">Djakarta WOWOWOW that was so fun! terima kasih ❤️</div>
+                </div>
+                <div class="card-content">
+                  <img src="./image/img6.png" alt="" />
+                </div>
+                <div class="like-comment">
+                  <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="number">12,285</p>
+                  </div>
+                  <div class="comment">
+                    <i class="fa-regular fa-comment"></i>
+                    <p class="number">5,435</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item-06">
+              <div class="zm-card-06">
+                <div class="card-header">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="./image/dj-snake.png" alt="" />
+                    </div>
+                    <div class="media-content">
+                      <div class="singer-name">
+                        <p class="singer">DJ Snake</p>
+                        <span class="infor"> • </span>
+                        <p class="infor1">Follow</p>
+                      </div>
+                      <div class="datetime">
+                        <p class="timer">30th November at 03:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="status">
+                    hank you India 🇮🇳 for welcoming me back with open arms after 3 years! As always the love and passion
+                    here is on another level. I can't believe we did 100,000 Tickets for this solo Indian tour. MADNESS!
+                    India I'll be back soon. ♥️🇮🇳 Love, William
+                  </div>
+                </div>
+                <div class="card-content">
+                  <img src="./image/img7.png" alt="" />
+                </div>
+                <div class="like-comment">
+                  <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="number">242,285</p>
+                  </div>
+                  <div class="comment">
+                    <i class="fa-regular fa-comment"></i>
+                    <p class="number">5,241</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item-07">
+              <div class="zm-card-07">
+                <div class="card-header">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="./image/cold-play.png" alt="" />
+                    </div>
+                    <div class="media-content">
+                      <div class="singer-name">
+                        <p class="singer">Cold Play</p>
+                        <span class="infor"> • </span>
+                        <p class="infor1">Follow</p>
+                      </div>
+                      <div class="datetime">
+                        <p class="timer">6th December 1:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="status"></div>
+                </div>
+                <div class="card-content">
+                  <img src="./image/img8.png" alt="" />
+                </div>
+                <div class="like-comment">
+                  <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="number">15,800</p>
+                  </div>
+                  <div class="comment">
+                    <i class="fa-regular fa-comment"></i>
+                    <p class="number">3,412</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item-08">
+              <div class="zm-card-08">
+                <div class="card-header">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="./image/ariana-grande.png" alt="" />
+                    </div>
+                    <div class="media-content">
+                      <div class="singer-name">
+                        <p class="singer">Ariana Grande</p>
+                        <span class="infor"> • </span>
+                        <p class="infor1">Follow</p>
+                      </div>
+                      <div class="datetime">
+                        <p class="timer">1st December at 9:30</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="status">mod vanilla & mod blush out now on ultabeauty.com @ultabeauty 🤎</div>
+                </div>
+                <div class="card-content">
+                  <img src="./image/img9.png" alt="" />
+                </div>
+                <div class="like-comment">
+                  <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="number">531,500</p>
+                  </div>
+                  <div class="comment">
+                    <i class="fa-regular fa-comment"></i>
+                    <p class="number">12,005</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item-09">
+              <div class="zm-card-09">
+                <div class="card-header">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="./image/olivia.png" alt="" />
+                    </div>
+                    <div class="media-content">
+                      <div class="singer-name">
+                        <p class="singer">Olivia Rodrigo</p>
+                        <span class="infor"> • </span>
+                        <p class="infor1">Follow</p>
+                      </div>
+                      <div class="datetime">
+                        <p class="timer">7th November at 19:30</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="status">
+                    feeling insanelyyyyyy lucky and honored to have helped induct the magnificent Carly Simon into the
+                    rock n roll hall of fame last night. being in a room with some of the greatest songwriters of all
+                    time was something I'll never ever forget. congrats Carly ily!!!! 🖤🖤🖤 @rockhall
+                  </div>
+                </div>
+                <div class="card-content">
+                  <img src="./image/img10.png" alt="" />
+                </div>
+                <div class="like-comment">
+                  <div class="like">
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="number">632,000</p>
+                  </div>
+                  <div class="comment">
+                    <i class="fa-regular fa-comment"></i>
+                    <p class="number">3,504</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- -------------------------------------------- end bảng tin ------------------ -->
+        <!-- contact -->
+        <div class="contact">
+          <div class="container">
+            <div class="row">
+              <div class="contact__form col-lg-6 col-12">
+                <h3 class="contact__form-title">Vote for Zing Music Award 2022</h3>
+                <p class="contact__form-decs">About yourself?</p>
+                <div class="row">
+                  <div class="col-12 col-md-6"><input type="text" placeholder="Name" /></div>
+                  <div class="col-12 col-md-6"><input type="email" placeholder="Email" /></div>
+                  <div class="col-12"><textarea placeholder="Name of your favourite singer"></textarea></div>
+                </div>
+                <button type="button">VOTE FOR YOUR FAVOURITE SINGER</button>
+              </div>
+              <div class="thumbnail col-6 d-lg-block d-none">
+                <img src="./image/music-award.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end contact -->
+      </div>
+      <!----------------------------------------footer play music----------------------------------- -->
+      <footer class="footer">
+        <div class="row justify-content-center">
+          <!-- song info -->
+          <div class="col-lg-3 col-sm-4 d-sm-flex d-none">
+            <div class="songInfo">
+              <div class="songInfo-img">
+                <img src="./image/dusk-till-dawn.jfif" alt="" />
+              </div>
+              <div class="songInfo-detail">
+                <p class="songname">Dusk Till Dawn</p>
+                <p class="singer-name">Zayn ft Sia</p>
+              </div>
+              <div class="songInfo-more">
+                <div class="icon">
+                  <i class="fas fa-heart heart"></i>
+                  <i class="fal fa-ellipsis-h-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--song control --->
+          <div class="col-lg-6 col-sm-8 col-12">
+            <div class="songControl">
+              <!-- song control menu -->
+              <div class="songControl-menu">
+                <audio src="./music/Y2meta.app - ZAYN & Sia - Dusk Till Dawn (Lyrics) (320 kbps).mp3"></audio>
+                <i class="fad fa-random random-btn"></i>
+                <i class="fas fa-step-backward prev-btn"></i>
+                <i class="fa-sharp fa-solid fa-play play-btn"></i>
+                <i class="fas fa-step-forward next-btn"></i>
+                <i class="fad fa-repeat repeat-btn"></i>
+              </div>
+              <!-- song control process -->
+              <div class="songControl-process">
+                <span class="time-start">00:00</span>
+                <div class="songControl-processbar">
+                  <p class="songControl-processbar-line"></p>
+                </div>
+                <span class="time-end">3:40</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- song Menu -->
+          <div class="col-3 d-lg-flex d-none">
+            <div class="songMenu">
+              <i class="far fa-signal-stream"></i>
+              <i class="fas fa-microphone-stand"></i>
+              <i class="fas fa-volume-up volume-btn"></i>
+              <i class="far fa-window-restore"></i>
+              <a href="#listSong"><i class="far fa-line-height"></i></a>
+            </div>
+          </div>
+        </div>
+        <!--end row-->
+      </footer>
     </div>
-</body>
-</html>
-</body>
+  </body>
 </html>
