@@ -1,3 +1,4 @@
+// Hàm render ra giao diện khi load trang
 function renderCarousel() {
   const carouselList = [...$(".carousel__item img")];
   carouselList.forEach((item) => {
@@ -78,13 +79,15 @@ async function renderListSong() {
               <i class="fa-solid fa-play"></i>
             </div>
           </div>
-        </div>
-      `;
+        </div>`;
         })
         .join("")
     );
   }
 }
+
+
+
 function handleCarousel() {
   //  default
   renderCarousel();
@@ -160,6 +163,7 @@ function handleAudioLoading() {
     }
   });
 }
+// hàm call API để lấy dữ liệu render ra bài hát
 async function callApiChangeInfo(songid) {
   let data;
   await fetch(`http://localhost:8080/admin/get_music_by_id.php?id=${songid}`)
@@ -266,6 +270,7 @@ function handlePlaySong() {
   handleCickOnListSong();
 }
 // ----------------- start ---------------------------
+
 
 function start() {
   handleCarousel();

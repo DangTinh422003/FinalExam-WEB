@@ -1,4 +1,6 @@
 <?php
+// kết nối đến database 
+
 // header("Content-type: text/html; charset=utf-8");
 header('access-control-allow-origin: *');
 $servername = "mysql-server";

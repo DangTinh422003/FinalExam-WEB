@@ -3,12 +3,12 @@
 1. Mở cửa sổ dòng lệnh (Terminal hoặc Command Prompt hoặc PowerShell) 
 2. Đến thư mục của dẫn của dự án Gõ lệnh "docker-compose up -d" để kích hoạt docker
 3. Sau khi chạy thành công, truy cập :
-	- http://localhost:8888 để vào phpMyAdmin sau đó import file database.sql ở đường dẫn 52100936_CaoDangTinh\mysql\sql
+	- http://localhost:8888 để vào phpMyAdmin sau đó import file database.sql ở đường dẫn 52100936_52100917_52100813_52000752_51800016\mysql\sql
 4. Sau tất cả các thao tác trên , truy cập vào đường dẫn :
 	Cách 1 :  Do dự án đã được deploy trên internet nên có thể truy cập vào đường dẫn
 			  https://final-exam-web.vercel.app/ để chạy thử dự án
 	
-	Cách 2 :  52100936_CaoDangTinh\www  =>  sau đó nháy chuột vào file index.html để có thể chạy thử dự án.
+	Cách 2 :  52100936_52100917_52100813_52000752_51800016\source\www  =>  sau đó nháy chuột vào file index.html để có thể chạy thử dự án.
 
 5 . Truy cập : https://github.com/DangTinh422003/FinalExam-WEB để có thể kiểm tra mã nguồn của toàn bộ trang web 
 	
