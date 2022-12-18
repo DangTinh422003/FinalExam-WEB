@@ -115,7 +115,7 @@ function handleCickOnListSong() {
     currentSongId = +this.dataset.songid;
     if (this.querySelector("i").classList.contains("fa-play")) {
       await callApiChangeInfo(currentSongId);
-      [...$(".listSong__list-item .play-btn i")].forEach((item,index) => {
+      [...$(".listSong__list-item .play-btn i")].forEach((item, index) => {
         console.log(item);
         item.classList.replace("fa-pause", "fa-play");
       });
@@ -138,9 +138,7 @@ function handleAudioLoading() {
     const processLine = $(".songControl-processbar-line").css("width", `${processTime}%`);
     let timeStart = "00:00";
     if (this.currentTime < 60) {
-      this.currentTime < 10
-        ? (timeStart = `00:0${Math.floor(this.currentTime)}`)
-        : (timeStart = `00:${Math.floor(this.currentTime)}`);
+      this.currentTime < 10 ? (timeStart = `00:0${Math.floor(this.currentTime)}`) : (timeStart = `00:${Math.floor(this.currentTime)}`);
     } else {
       let minute = Math.floor(this.currentTime / 60);
       let second = Math.floor(this.currentTime % 60);
